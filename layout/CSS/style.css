@@ -1,4 +1,19 @@
 /******************\
+|** Start  Login **|
+\******************/
+
+.form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 13rem;
+    gap: 6px;
+    width: 50% !important;
+}
+/******************\
+|*** End  Login ***|
+\******************/
+
+/******************\
 |** Start footer **|
 \******************/
 
