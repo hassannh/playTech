@@ -97,7 +97,7 @@
 
     </div>
     <div class="service">
-    <i class="fa fa-cart"></i><br>
+    <i class="fa fa-shopping-cart" aria-hidden="true"></i><br>
         <span>Buy Item</span>
         <p>
             Lorem ipsum dolor,
