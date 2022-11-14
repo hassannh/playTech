@@ -189,9 +189,9 @@ form.add_item{
 }
 .items{
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    gap: 20px;
 }
 .item_img{
     width: 100%;
