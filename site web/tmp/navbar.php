@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="z-index: 1; position: fixed; width: 100%;">
   <div class="container-fluid">
     <a class="navbar-brand" href="home.php"><img src="layout/image/playtech-logo.png" alt="logo"></a>
