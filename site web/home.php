@@ -39,7 +39,7 @@
                  rem aspernatur, consequuntur vero!</p>
     </div>
     <div class="aboutU-img">
-    <img src="layout/image/happy-senior-female-manager-portrait-office-37577449.jpg" alt="">
+    <img src="layout/image/pexels-sora-shimazaki-5669638.jpg" alt="">
     </div>
 </div>
 
