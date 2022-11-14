@@ -7,7 +7,7 @@
         <div class="grid_footer">
             <div class="grid_items">
                 <div class="title_grid_items">
-                    A PROPOS DE NOUS
+                    ABOUT US
                 </div>
                 <div class="desc_grid_items">
                     <pre>Playtech is a market 
@@ -22,16 +22,15 @@ offering cutting-edge ...
             </div>
             <div class="grid_items">
                 <div class="title_grid_items">
-                    NOTRE PREMIERS PLATS
+                    OUR ITEMS
                 </div>
                 <div class="desc_grid_items">
-                    <pre>¤ Sushi 
-¤ Filets de rougets au 
-      basilic 
-¤ Choucroute de la mer 
-      express 
-¤ Dorade en croûte de sel
-                    
+                    <pre>¤ Games Tools 
+¤ Remote Controls
+¤ Keyboards
+¤ PC Gamer
+¤ DVD Of Games
+¤ Gamer Mouse         
                     </pre>
                 </div>
             </div>
@@ -49,7 +48,7 @@ Business
             </div>
             <div class="grid_items">
                 <div class="title_grid_items">
-                    SUIVEZ-NOUS
+                    FOLLOW US
                 </div>
                 <div class="desc_grid_items">
                     <div class="reseaux">

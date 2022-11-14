@@ -1,3 +1,10 @@
+
+/* .nvbf{
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+} */
+
 /******************\
 |** Start  Login **|
 \******************/
@@ -89,6 +96,7 @@ form.add_item{
 }
 .aboutU-img img{
     width: 100%;
+    border-radius: 15px;
 }
 .aboutU-desc{
     width: 540px;
