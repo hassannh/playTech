@@ -1,7 +1,6 @@
 <?php
+$pageTitle = 'Gallery';
     include 'init.php';
-    include 'tmp/head.php';
-    include 'tmp/navbar.php';
 ?>
 
 <div class="gallery">

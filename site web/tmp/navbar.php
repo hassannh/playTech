@@ -15,11 +15,15 @@
           <a class="nav-link" href="gallery.php">Gallery</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="drop_shopping.php">drop</a>
+          <a class="nav-link" href="items.php">Items Control</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            name_of_user
+            <?php
+              if (isset($_SESSION['Username'])) {
+                  echo $_SESSION['Username'];
+              }   
+            ?>
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="logout.php">Log Out</a></li>

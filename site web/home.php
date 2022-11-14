@@ -1,7 +1,12 @@
 <?php
+ob_start(); // Output Buffering Start 
+
+session_start();
+
+if (isset($_SESSION['Username'])) {
+    $pageTitle = 'Home';
     include 'init.php';
-    include 'tmp/head.php';
-    include 'tmp/navbar.php';
+    /* Start Home Page */
 ?>
 
 
@@ -120,8 +125,18 @@
 </div>
 
 
+<?php    /* End Home Page */
 
-<?php
-    include 'tmp/footer.php';
-    include 'tmp/script.php';
+include 'tmp/footer.php';
+include 'tmp/script.php';
+} else {
+
+    header('Location: index.php');
+
+    exit();
+}
+
+ob_end_flush(); // Release The Output
+
 ?>
+
