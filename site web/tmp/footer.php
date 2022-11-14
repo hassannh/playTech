@@ -10,20 +10,13 @@
                     A PROPOS DE NOUS
                 </div>
                 <div class="desc_grid_items">
-                    <pre>Venez découvrir notre fgze
-   restaurant Hitaki 14 
-   Av. Zerktouni, Safi. 
-   Installé depuis 2019, 
-   après transformation 
-   d’une ancienne 
-   restaurant existante 
-   depuis 2018. Notre 
-   restaurant dispose de 
-   2 salles et pour les 
-   beaux jours d'une 
-   grande terrasse 
-   ombragée.
-                    
+                    <pre>Playtech is a market 
+leader in the gambling 
+and financial trading 
+industries. We are the 
+world's largest online 
+gambling software supplier 
+offering cutting-edge ...
                     </pre>
                 </div>
             </div>
