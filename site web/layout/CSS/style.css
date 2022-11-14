@@ -89,6 +89,7 @@ form.add_item{
 }
 .aboutU-img img{
     width: 100%;
+    border-radius: 15px;
 }
 .aboutU-desc{
     width: 540px;
