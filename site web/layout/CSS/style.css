@@ -119,9 +119,26 @@ form.add_item{
 .aboutU-desc p{
     color: #6b6f70;
 }
-.services{
+.services {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.service {
+    width: 252px;
+}
+.service span {
+    justify-content: center;
+    display: flex;
+}
+.service i {
+    justify-content: center;
+    display: flex;
+    padding-top: 10px;
+    margin-bottom: -17px;
+}
+.service p {
+    text-align: justify;
 }
 /******************\
 |**** End Home ****|
