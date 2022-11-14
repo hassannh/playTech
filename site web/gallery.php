@@ -14,13 +14,111 @@
         <span><b>Central Units</b></span>
     </div>
     <div class="items">
-        <div class="item">
-            <div class="item_img"><img src="layout/image/remote.jpg" alt=""></div>
-            <div class="item_desc">
-                <span class="item_title"><b>Manette</b></span>
-                <div class="item_buy">
-                    <span class="item_price">$15</span>
-                    <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+        <div class="card" style="width: 18rem;">
+            <div class="item_img">
+                <img src="layout/image/remote.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="btn" style="
+                    display: flex;
+                    gap: 10px;
+                ">
+                    <div class="item_buy">
+                        <span class="item_price btn btn-primary">$15</span>
+                        <i class="fa fa-cart-arrow-down btn btn-primary" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="item_img">
+                <img src="layout/image/remote.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="btn" style="
+                    display: flex;
+                    gap: 10px;
+                ">
+                    <div class="item_buy">
+                        <span class="item_price btn btn-primary">$15</span>
+                        <i class="fa fa-cart-arrow-down btn btn-primary" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="item_img">
+                <img src="layout/image/remote.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="btn" style="
+                    display: flex;
+                    gap: 10px;
+                ">
+                    <div class="item_buy">
+                        <span class="item_price btn btn-primary">$15</span>
+                        <i class="fa fa-cart-arrow-down btn btn-primary" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="item_img">
+                <img src="layout/image/remote.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="btn" style="
+                    display: flex;
+                    gap: 10px;
+                ">
+                    <div class="item_buy">
+                        <span class="item_price btn btn-primary">$15</span>
+                        <i class="fa fa-cart-arrow-down btn btn-primary" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>*
+        <div class="card" style="width: 18rem;">
+            <div class="item_img">
+                <img src="layout/image/remote.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="btn" style="
+                    display: flex;
+                    gap: 10px;
+                ">
+                    <div class="item_buy">
+                        <span class="item_price btn btn-primary">$15</span>
+                        <i class="fa fa-cart-arrow-down btn btn-primary" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="item_img">
+                <img src="layout/image/remote.jpg" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <div class="btn" style="
+                    display: flex;
+                    gap: 10px;
+                ">
+                    <div class="item_buy">
+                        <span class="item_price btn btn-primary">$15</span>
+                        <i class="fa fa-cart-arrow-down btn btn-primary" aria-hidden="true"></i>
+                    </div>
                 </div>
             </div>
         </div>
