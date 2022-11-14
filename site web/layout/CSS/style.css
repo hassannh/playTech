@@ -1,21 +1,77 @@
 /******************\
 |** Start  Login **|
 \******************/
-
-.form{
-    display: flex;
-    flex-direction: column;
-    margin-top: 13rem;
-    gap: 6px;
-    width: 50% !important;
-}
+    .login{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        margin: 18.5% 35%;
+        gap: 10px;
+    }
+    .submit{
+        width: 30%;
+        margin: 0 35%;
+    }
 /******************\
 |*** End  Login ***|
 \******************/
 
 /******************\
+|*** Start Drop ***|
+\******************/
+
+
+.drop_title {
+    text-align: center;
+    margin: 20px 0;
+    font-family: 'Poppins';
+    font-weight: bold;
+}
+
+form.add_item{
+    display: flex !important;
+    flex-direction: column !important;
+    width: 50% !important;
+    margin: 20px 25% !important;
+    gap: 10px;
+}
+.item {
+    display: flex;
+}
+.label_item {
+    width: 190px;
+    margin-right: 2%;
+}
+.file{
+    width: 255px;
+}
+.input_item {
+    width: 73%;
+    border-radius: 0.25rem;
+}
+.submit_add {
+    width: 30%;
+    margin: 0 35%;
+    display: flex;
+    align-items: center;
+}
+.input_submit {
+    width: 100%;
+    padding-left: 25% !important;
+}
+.add_plus {
+    position: absolute;
+    left: 45%;
+}
+
+/******************\
+|**** End Drop ****|
+\******************/
+
+/******************\
 |** Start footer **|
 \******************/
+
 
 footer {
     margin-top: 10px;
@@ -25,6 +81,9 @@ footer {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+}
+.logo_footer a{
+    text-decoration: none;
 }
 
 .logo_footer {
@@ -48,12 +107,12 @@ footer {
 }
 
 .grid_footer .grid_items .title_grid_items {
-    color: #FFFFFF;
+    color: #22b2be;
     font-size: 20px;
 }
 
 .grid_footer .grid_items .desc_grid_items {
-    color: #22B2B8;
+    color: #076f78;
     font-size: 16px;
 }
 

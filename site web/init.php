@@ -1,3 +1,4 @@
-<?php
-    $temp = 'templats/'; // var of templats
+<?php 
+    $title = ' PlayTech ';
 ?>
+    

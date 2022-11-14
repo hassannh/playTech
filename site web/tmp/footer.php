@@ -1,7 +1,7 @@
-<footer>
-        <div class="logo_footer">
-            <a href="index.html">
-                <img src="../image/logo.png" alt="logo">
+<footer class="navbar-light bg-light">
+        <div class="logo_footer navbar-brand">
+            <a href="home.php">
+                PlayTech
             </a>
         </div>
         <div class="grid_footer">
@@ -52,24 +52,6 @@ Policy
 Business
                     
                     </pre>
-                </div>
-            </div>
-            <div class="grid_items">
-                <div class="title_grid_items">
-                    HIKATA APP
-                </div>
-                <div class="desc_grid_items">
-                    <div class="logo_apk">
-                        <img src="image/logo_apk.png" alt="logo_apk">
-                    </div>
-                    <div class="stors">
-                        <a href="#">
-                            <img src="image/app stors.png" alt="app store">
-                        </a>
-                        <a href="#">
-                            <img src="image/play stors.png" alt="play store">
-                        </a>
-                    </div>
                 </div>
             </div>
             <div class="grid_items">
