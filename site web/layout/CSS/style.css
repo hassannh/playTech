@@ -119,6 +119,10 @@ form.add_item{
 .aboutU-desc p{
     color: #6b6f70;
 }
+.services{
+    display: flex;
+    flex-direction: row;
+}
 /******************\
 |**** End Home ****|
 \******************/

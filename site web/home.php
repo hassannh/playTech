@@ -44,6 +44,79 @@
 </div>
 
 
+<div class="services">
+    <div class="service">
+        <i class="fa fa-plus"></i><br>
+        <span>Add Item</span>
+        <p>
+            Lorem ipsum dolor,
+            sit amet consectetur
+            adipisicing elit. Tenetur
+            tempora culpa non. Cum 
+            quibusdam, iste assumenda, 
+            voluptatem maiores perferendis 
+            ratione, eaque deleniti
+            eius debitis quam adipisci
+            dolor rem deserunt molestias.
+            
+        </p>
+
+    </div>
+    <div class="service">
+    <i class="fa fa-edit"></i><br>
+        <span>Edit Item</span>
+        <p>
+            Lorem ipsum dolor,
+            sit amet consectetur
+            adipisicing elit. Tenetur
+            tempora culpa non. Cum 
+            quibusdam, iste assumenda, 
+            voluptatem maiores perferendis 
+            ratione, eaque deleniti
+            eius debitis quam adipisci
+            dolor rem deserunt molestias.
+            
+        </p>
+
+    </div>
+    <div class="service">
+    <i class="fa fa-close"></i><br>
+        <span>Delete Item</span>
+        <p>
+            Lorem ipsum dolor,
+            sit amet consectetur
+            adipisicing elit. Tenetur
+            tempora culpa non. Cum 
+            quibusdam, iste assumenda, 
+            voluptatem maiores perferendis 
+            ratione, eaque deleniti
+            eius debitis quam adipisci
+            dolor rem deserunt molestias.
+            
+        </p>
+
+    </div>
+    <div class="service">
+    <i class="fa fa-cart"></i><br>
+        <span>Buy Item</span>
+        <p>
+            Lorem ipsum dolor,
+            sit amet consectetur
+            adipisicing elit. Tenetur
+            tempora culpa non. Cum 
+            quibusdam, iste assumenda, 
+            voluptatem maiores perferendis 
+            ratione, eaque deleniti
+            eius debitis quam adipisci
+            dolor rem deserunt molestias.
+            
+        </p>
+
+    </div>
+   
+</div>
+
+
 
 <?php
     include 'tmp/footer.php';
