@@ -1,7 +1,7 @@
 <footer class="navbar-light bg-light">
         <div class="logo_footer navbar-brand">
             <a href="home.php">
-                PlayTech
+                <img src="layout/image/playtech-logo.png" alt="logo">
             </a>
         </div>
         <div class="grid_footer">
@@ -10,7 +10,7 @@
                     A PROPOS DE NOUS
                 </div>
                 <div class="desc_grid_items">
-                    <pre>Venez découvrir notre 
+                    <pre>Venez découvrir notre fgze
    restaurant Hitaki 14 
    Av. Zerktouni, Safi. 
    Installé depuis 2019, 
