@@ -68,6 +68,43 @@ form.add_item{
 |**** End Drop ****|
 \******************/
 
+
+
+
+/******************\
+|*** Start home ***|
+\******************/
+
+.backgrouandtech{
+    width: 100%;
+}
+.aboutU{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    justify-content: space-evenly;
+}
+.aboutU-img{
+    width: 540px;
+}
+.aboutU-img img{
+    width: 100%;
+}
+.aboutU-desc{
+    width: 540px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+/******************\
+|**** End Home ****|
+\******************/
+
+
 /******************\
 |** Start footer **|
 \******************/
