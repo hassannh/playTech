@@ -186,6 +186,7 @@ form.add_item{
     gap: 20px;
     padding: 10px;
     margin-right: 10px;
+    cursor: pointer;
 }
 .items{
     display: flex;
