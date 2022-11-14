@@ -1,6 +1,3 @@
-<?php
-    include 'tmp/head.php';
-?>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="home.php"><img src="layout/image/playtech-logo.png" alt="logo"></a>
@@ -34,7 +31,3 @@
     </div>
   </div>
 </nav>
-
-<?php
-    include 'tmp/script.php';
-?>
