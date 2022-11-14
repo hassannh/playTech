@@ -17,7 +17,7 @@
         <div class="item">
             <div class="item_img"><img src="layout/image/remote.jpg" alt=""></div>
             <div class="item_desc">
-                <span class="item_title">title</span>
+                <span class="item_title"><b>Manette</b></span>
                 <div class="item_buy">
                     <span class="item_price">$15</span>
                     <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
