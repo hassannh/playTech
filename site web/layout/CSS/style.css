@@ -1,4 +1,10 @@
 
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+
 /******************\
 |** Start  Login **|
 \******************/
@@ -27,6 +33,7 @@
     margin: 20px 0;
     font-family: 'Poppins';
     font-weight: bold;
+    padding-top: 100px;
 }
 
 form.add_item{
@@ -123,10 +130,32 @@ form.add_item{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin-top: 40px;
+    gap: 10px;
+}
+.service_title{
+    text-align: center;
+    margin-top: 20px;
 }
 .service {
     width: 252px;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    padding: 0 7px;
+    border-radius: 15px;
 }
+.Add{
+    background-color:#3498db ;
+}
+.Edit{
+    background-color:#8e44ad;
+}
+.Delete{
+    background-color:#c0392b ;
+}
+.Buy{
+    background-color:#d35400 ;
+}
+
 .service span {
     justify-content: center;
     display: flex;
@@ -136,8 +165,11 @@ form.add_item{
     display: flex;
     padding-top: 10px;
     margin-bottom: -17px;
+    font-size: 44px;
+    color: white;
 }
 .service p {
+    color: #d8dbdc;
     text-align: justify;
 }
 /******************\

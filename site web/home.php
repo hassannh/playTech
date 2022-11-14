@@ -44,10 +44,13 @@
 </div>
 
 
+<div class="service_title">
+    <h2>Our Services</h2>
+</div>
 <div class="services">
-    <div class="service">
+    <div class="service Add">
         <i class="fa fa-plus"></i><br>
-        <span>Add Item</span>
+        <span><b>Add Item</b></span>
         <p>
             Lorem ipsum dolor,
             sit amet consectetur
@@ -62,9 +65,9 @@
         </p>
 
     </div>
-    <div class="service">
+    <div class="service Edit">
     <i class="fa fa-edit"></i><br>
-        <span>Edit Item</span>
+        <span><b>Edit Item</b></span>
         <p>
             Lorem ipsum dolor,
             sit amet consectetur
@@ -79,9 +82,9 @@
         </p>
 
     </div>
-    <div class="service">
+    <div class="service Delete">
     <i class="fa fa-close"></i><br>
-        <span>Delete Item</span>
+        <span><b>Delete Item</b></span>
         <p>
             Lorem ipsum dolor,
             sit amet consectetur
@@ -96,9 +99,9 @@
         </p>
 
     </div>
-    <div class="service">
+    <div class="service Buy">
     <i class="fa fa-shopping-cart" aria-hidden="true"></i><br>
-        <span>Buy Item</span>
+        <span><b>Buy Item</b></span>
         <p>
             Lorem ipsum dolor,
             sit amet consectetur
