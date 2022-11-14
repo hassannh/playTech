@@ -27,9 +27,9 @@
 </div>
 
 
-<div class="aboutU">
+<div class="aboutU Manager">
     <div class="aboutU-desc">
-        <span>What Our Manager Said</span>
+        <span><b>What Our Manager Said</b></span>
         <p>Lorem, ipsum dolor sit amet
              consectetur adipisicing elit.
               Illum perferendis amet earum 

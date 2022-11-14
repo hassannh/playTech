@@ -99,9 +99,26 @@ form.add_item{
     flex-direction: column;
     justify-content: center;
 }
-
-
-
+.Manager{
+    margin-top: 50px;
+    background-color: #E5E5E5;
+}
+.Manager .aboutU-img {
+    padding: 5%;
+}
+.Manager .aboutU-img img{
+    width: 100%;
+}
+.aboutU-desc{
+    font-size: 27px;
+    text-align: justify;
+}
+.aboutU-desc span{
+    color: #2C3E7E;
+}
+.aboutU-desc p{
+    color: #6b6f70;
+}
 /******************\
 |**** End Home ****|
 \******************/
