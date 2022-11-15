@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 15 nov. 2022 à 14:19
+-- Généré le : mar. 15 nov. 2022 à 15:55
 -- Version du serveur : 10.4.24-MariaDB
 -- Version de PHP : 7.4.29
 
@@ -35,15 +35,6 @@ CREATE TABLE `items` (
   `Add_Date` date NOT NULL,
   `Image` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Déchargement des données de la table `items`
---
-
-INSERT INTO `items` (`Item_ID`, `Name`, `Description`, `Price`, `Add_Date`, `Image`) VALUES
-(2, 'DSG', 'DSQB', 'QFB', '2022-11-15', 'Capture d\'écran_20221028_161221.png'),
-(3, 'GFSDH', 'FDH', 'FDHS', '2022-11-15', 'Capture d\'écran_20221031_110120.png'),
-(4, ' ', ' ', ' ', '2022-11-15', 'Capture d\'écran_20221028_161221.png');
 
 -- --------------------------------------------------------
 
@@ -92,7 +83,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `items`
 --
 ALTER TABLE `items`
-  MODIFY `Item_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `Item_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT pour la table `users`
