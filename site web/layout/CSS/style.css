@@ -168,15 +168,18 @@ form.add_item{
     display: flex;
 }
 .gallery .select{
-    display: flex;
-    flex-direction: column;
     width: 25%;
     background-color: aliceblue;
-    gap: 20px;
-    padding: 10px;
-    margin-right: 10px;
-    cursor: pointer;
 }
+.gallery .select::-webkit-scrollbar {
+    display: none;
+  }
+.select_op{
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-family: bold;
+}
+
 .items{
     display: flex;
     flex-wrap: wrap;
@@ -197,10 +200,15 @@ form.add_item{
     width: -webkit-fill-available;
     align-items: center;
 }
-.item_buy i{
-    height: 38px;
+.item_buy{
     display: flex;
-    align-items: center;
+    gap: 10px;
+    width: 187%;
+    margin-left: -67px;
+    justify-content: center;
+}
+.item_price{
+    cursor: default;
 }
 
 /******************\

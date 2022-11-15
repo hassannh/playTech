@@ -88,8 +88,18 @@
     </div>   
     <div class="item">
         <label class="input-group-text label_item" for="img_item">Image de produit</label>
-        <input class="form-control input_item" type="file" name="img_item" required="required">
+        <input class="form-control input_item" type="file" name="img_item" accept="image/png, image/jpeg, image/jpg" required="required">
+
     </div>
+    <select class="form-select input-group-text" name="categories">
+        <option selected Disabled>Categories</option>
+        <option value="All">All</option>
+        <option value="Games">Games</option>
+        <option value="Mouses">Mouses</option>
+        <option value="KeyBoards">KeyBoards</option>
+        <option value="Screen">Screen</option>
+        <option value="Control">Remote control</option>
+    </select>
     <div class="submit_add">
         <input class="input-group-text input_submit" type="submit" value="+ Ajouter le produit">
     </div>
@@ -105,23 +115,26 @@
 
                 // Get Variables From The Form
 
-                $name         =  $_POST['name'];
-                $desc         =  $_POST['description'];
-                $price        =  $_POST['price'];
-                $image      =  $_POST['img_item'];
+                $name           =  $_POST['name'];
+                $desc           =  $_POST['description'];
+                $price          =  $_POST['price'];
+                $image          =  $_POST['img_item'];
+                $category       =  $_POST['categories'];
+                
                 
                     // Insert Item info In The Database
                     //cus cant merge sql with php
 
                     $stmt = $con->prepare("INSERT INTO 
-                                items(Name, Description, Price, Image, Add_Date)
-                            VALUES(:zname, :zdesc, :zprice, :zimage, now())");
+                                items(Name, Description, Price, Image, Add_Date, categories)
+                            VALUES(:zname, :zdesc, :zprice, :zimage, now(), :zcategory)");
                     $stmt->execute(array(
 
                         'zname'     => $name,
                         'zdesc'     => $desc,
                         'zprice'    => $price,
-                        'zimage'  => $image
+                        'zimage'  => $image,
+                        'zcategory'  => $category
 
                     ));
                     
@@ -175,23 +188,32 @@
                 <input type="hidden" name="itemid" value="<?php echo $itemid ?>">   
     <div class="item">
         <label class="input-group-text label_item" for="name">Nom de produit</label>
-        <input type="text" class="form-control" name="name" placeholder="Name Of The Item" required="required">
+        <input type="text" class="form-control" name="name" value="<?php echo $item['Name'] ?>" required="required">
     </div>
     <div class="item">
         <label class="input-group-text label_item" for="description">Description de produit</label>
-        <input type="text" class="form-control" name="description" placeholder="Description Of The Item" required="required">
+        <input type="text" class="form-control" name="description" value="<?php echo $item['Description'] ?>" required="required">
     </div>
     <div class="item">
         <label class="input-group-text label_item" for="prix_item">Prix de produit</label>
-        <input type="text" class="form-control" name="price" placeholder="Price Of The Item" required="required">
+        <input type="text" class="form-control" name="price" value="<?php echo $item['Price'] ?>" required="required">
     </div>   
     <div class="item">
         <label class="input-group-text label_item" for="img_item">Image de produit</label>
-        <input class="form-control input_item" type="file" name="img_item" required="required">
+        <input class="form-control input_item" type="file" name="img_item" accept="image/png, image/jpeg, image/jpg" required="required">
+
     </div>
+    <select class="form-select input-group-text" value="<?php echo $item['categories'] ?>" name="categories">
+        <option selected Disabled>Categories</option>
+        <option value="All">All</option>
+        <option value="Games">Games</option>
+        <option value="Mouses">Mouses</option>
+        <option value="KeyBoards">KeyBoards</option>
+        <option value="Screen">Screen</option>
+        <option value="Control">Remote control</option>
+    </select>
     <div class="submit_add">
-        <i class="fa fa-plus add_plus"></i>
-        <input class="input-group-text input_submit" type="submit" value="  Save Item">
+        <input class="input-group-text input_submit" type="submit" value="+ Save Item">
     </div>
 </form>
 <?php
@@ -218,11 +240,12 @@
 
                 // Get Variables From The Form
 
-                $id         =  $_POST['itemid'];
-                $name       =  $_POST['name'];
-                $desc       =  $_POST['description'];
-                $price      =  $_POST['price'];
-                $image    =  $_POST['img_item'];
+                $id             =  $_POST['itemid'];
+                $name           =  $_POST['name'];
+                $desc           =  $_POST['description'];
+                $price          =  $_POST['price'];
+                $image          =  $_POST['img_item'];
+                $category       =  $_POST['categories'];
 
                     // Update The Database With This Info
 
@@ -232,10 +255,11 @@
                                                 Name = ?,  
                                                 Description = ?, 
                                                 Price = ?, 
-                                                Image = ?
+                                                Image = ?,
+                                                categories = ?
                                             WHERE 
                                                 Item_ID = ?");
-                    $stmt->execute(array($name, $desc, $price, $image, $id));
+                    $stmt->execute(array($name, $desc, $price, $image, $category, $id));
 
                     // Echo Success Message
 
