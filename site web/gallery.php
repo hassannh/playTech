@@ -20,7 +20,7 @@ if (isset($_SESSION['Username'])) {
     <div class="items">
         <div class="card" style="width: 18rem;">
             <div class="item_img">
-                <img src="layout/image/remote.jpg" class="card-img-top" alt="...">
+                <img src="layout/image/items/r.jpg" class="card-img-top" alt="...">
             </div>
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -38,7 +38,7 @@ if (isset($_SESSION['Username'])) {
         </div>
         <div class="card" style="width: 18rem;">
             <div class="item_img">
-                <img src="layout/image/remote.jpg" class="card-img-top" alt="...">
+                <img src="layout/image/items/r.jpg" class="card-img-top" alt="...">
             </div>
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -56,7 +56,7 @@ if (isset($_SESSION['Username'])) {
         </div>
         <div class="card" style="width: 18rem;">
             <div class="item_img">
-                <img src="layout/image/remote.jpg" class="card-img-top" alt="...">
+                <img src="layout/image/items/r.jpg" class="card-img-top" alt="...">
             </div>
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -74,7 +74,7 @@ if (isset($_SESSION['Username'])) {
         </div>
         <div class="card" style="width: 18rem;">
             <div class="item_img">
-                <img src="layout/image/remote.jpg" class="card-img-top" alt="...">
+                <img src="layout/image/items/r.jpg" class="card-img-top" alt="...">
             </div>
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -92,7 +92,7 @@ if (isset($_SESSION['Username'])) {
         </div>
         <div class="card" style="width: 18rem;">
             <div class="item_img">
-                <img src="layout/image/remote.jpg" class="card-img-top" alt="...">
+                <img src="layout/image/items/r.jpg" class="card-img-top" alt="...">
             </div>
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -110,7 +110,7 @@ if (isset($_SESSION['Username'])) {
         </div>
         <div class="card" style="width: 18rem;">
             <div class="item_img">
-                <img src="layout/image/remote.jpg" class="card-img-top" alt="...">
+                <img src="layout/image/items/r.jpg" class="card-img-top" alt="...">
             </div>
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -128,7 +128,7 @@ if (isset($_SESSION['Username'])) {
         </div>
         <div class="card" style="width: 18rem;">
             <div class="item_img">
-                <img src="layout/image/remote.jpg" class="card-img-top" alt="...">
+                <img src="layout/image/items/r.jpg" class="card-img-top" alt="...">
             </div>
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -146,7 +146,7 @@ if (isset($_SESSION['Username'])) {
         </div>
         <div class="card" style="width: 18rem;">
             <div class="item_img">
-                <img src="layout/image/remote.jpg" class="card-img-top" alt="...">
+                <img src="layout/image/items/r.jpg" class="card-img-top" alt="...">
             </div>
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -164,7 +164,7 @@ if (isset($_SESSION['Username'])) {
         </div>
         <div class="card" style="width: 18rem;">
             <div class="item_img">
-                <img src="layout/image/remote.jpg" class="card-img-top" alt="...">
+                <img src="layout/image/items/r.jpg" class="card-img-top" alt="...">
             </div>
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -182,7 +182,7 @@ if (isset($_SESSION['Username'])) {
         </div>
         <div class="card" style="width: 18rem;">
             <div class="item_img">
-                <img src="layout/image/remote.jpg" class="card-img-top" alt="...">
+                <img src="layout/image/items/r.jpg" class="card-img-top" alt="...">
             </div>
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -200,7 +200,7 @@ if (isset($_SESSION['Username'])) {
         </div>
         <div class="card" style="width: 18rem;">
             <div class="item_img">
-                <img src="layout/image/remote.jpg" class="card-img-top" alt="...">
+                <img src="layout/image/items/r.jpg" class="card-img-top" alt="...">
             </div>
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
@@ -218,7 +218,7 @@ if (isset($_SESSION['Username'])) {
         </div>
         <div class="card" style="width: 18rem;">
             <div class="item_img">
-                <img src="layout/image/remote.jpg" class="card-img-top" alt="...">
+                <img src="layout/image/items/r.jpg" class="card-img-top" alt="...">
             </div>
             <div class="card-body">
                 <h5 class="card-title">Card title</h5>
