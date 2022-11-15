@@ -1,5 +1,7 @@
 <?php
+//to execute everything
 session_start();
+
 $noNavbar = '';
 $pageTitle = 'Login';
 

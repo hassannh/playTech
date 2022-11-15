@@ -55,15 +55,15 @@
                         foreach ($items as $item) {
     
                             echo "<tr>";
-                            echo "<td>" . $item['Item_ID'] . "</td>";
-                            echo "<td>" . $item['Name'] . "</td>";
-                            echo "<td>" . $item['Description'] . "</td>";
-                            echo "<td>" . $item['Price'] . "</td>";
-                            echo "<td>" . $item['Add_Date'] . "</td>";
-                            echo "<td>
-                                <a href='items.php?do=Edit&itemid=" . $item['Item_ID'] . "' class='btn btn-success'><i class='fa fa-edit'></i> Edit</a>
-                                <a href='items.php?do=Delete&itemid=" . $item['Item_ID'] . "' class='btn btn-danger confirm'><i class='fa fa-close'></i> Delete </a>";
-                            echo "</td>";
+                                echo "<td>" . $item['Item_ID'] . "</td>";
+                                echo "<td>" . $item['Name'] . "</td>";
+                                echo "<td>" . $item['Description'] . "</td>";
+                                echo "<td>" . $item['Price'] . "</td>";
+                                echo "<td>" . $item['Add_Date'] . "</td>";
+                                echo "<td>
+                                    <a href='items.php?do=Edit&itemid=" . $item['Item_ID'] . "' class='btn btn-success'><i class='fa fa-edit'></i> Edit</a>
+                                    <a href='items.php?do=Delete&itemid=" . $item['Item_ID'] . "' class='btn btn-danger confirm'><i class='fa fa-close'></i> Delete </a>";
+                                echo "</td>";
                             echo "</tr>";
                         }
                         ?>
@@ -111,40 +111,6 @@
                 $price        =  $_POST['price'];
                 $image      =  $_POST['img_item'];
                 
-                // Validate The Form
-
-                $formErrors = array();
-
-                if (empty($user)) {
-
-                    $formErrors[] = 'Name Can\'t Be <strong>Empty</strong>';
-                }
-
-                if (empty($desc)) {
-
-                    $formErrors[] = 'Description Can\'t Be <strong>Empty</strong>';
-                }
-
-                if (empty($price)) {
-
-                    $formErrors[] = 'Price Can\'t Be <strong>Empty</strong>';
-                }
-
-                if (empty($image)) {
-
-                    $formErrors[] = 'image Can\'t Be <strong>Empty</strong>';
-                }
-                // Loop Intro Errors Array And Echo It
-
-                foreach ($formErrors as $error) {
-
-                    echo '<div class="alert alert-danger">' . $error . '</div>';
-                }
-                
-                // Check If There's No Error Proceed The Update Operation
-
-                if (empty($formErrors)) {
-
                     // Insert Item info In The Database
 
                     $stmt = $con->prepare("INSERT INTO 
@@ -164,7 +130,7 @@
                     $theMsg = "<div class='alert alert-success'>" . $stmt->rowCount() . ' Record Inserted </div>';
 
                     redirectHome($theMsg, 'back');
-                }
+                
             } else {
 
                 echo "<div class='container'>";

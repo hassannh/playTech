@@ -8,7 +8,9 @@ $option = array(
 );
 
 try {
+    //check if data base there
     $con = new PDO($dsn, $user, $pass, $option);
+    //connect data with data base
     $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     echo 'failed' . $e->getMessage();
