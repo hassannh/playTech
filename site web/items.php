@@ -87,12 +87,11 @@
         <input type="text" class="form-control" name="price" placeholder="Price Of The Item" required="required">
     </div>   
     <div class="item">
-        <label class="input-group-text label_item file" for="img_item">Image de produit</label>
+        <label class="input-group-text label_item" for="img_item">Image de produit</label>
         <input class="form-control input_item" type="file" name="img_item" required="required">
     </div>
     <div class="submit_add">
-        <i class="fa fa-plus add_plus"></i>
-        <input class="input-group-text input_submit" type="submit" value="  Ajouter le produit">
+        <input class="input-group-text input_submit" type="submit" value="+ Ajouter le produit">
     </div>
 </form>
 <?php
@@ -127,7 +126,7 @@
                     
                     // Echo Success Message
 
-                    $theMsg = "<div class='alert alert-success'>" . $stmt->rowCount() . ' Record Inserted </div>';
+                    $theMsg = "<div class='alert alert-success push'>" . $stmt->rowCount() . ' Record Inserted </div>';
 
                     redirectHome($theMsg, 'back');
                 
@@ -135,7 +134,7 @@
 
                 echo "<div class='container'>";
 
-                $theMsg = '<div class="alert alert-danger">Sorry You Cant Browse This Page Directly</div>';
+                $theMsg = '<div class="alert alert-danger push">Sorry You Cant Browse This Page Directly</div>';
 
                 redirectHome($theMsg);
 
@@ -186,7 +185,7 @@
         <input type="text" class="form-control" name="price" placeholder="Price Of The Item" required="required">
     </div>   
     <div class="item">
-        <label class="input-group-text label_item file" for="img_item">Image de produit</label>
+        <label class="input-group-text label_item" for="img_item">Image de produit</label>
         <input class="form-control input_item" type="file" name="img_item" required="required">
     </div>
     <div class="submit_add">
@@ -202,7 +201,7 @@
 
                 echo "<div class='container'>";
 
-                $theMsg =  '<div class="alert alert-danger">Theres No Such Id</div>';
+                $theMsg =  '<div class="alert alert-danger push-">Theres No Such Id</div>';
 
                 redirectHome($theMsg);
 
@@ -252,7 +251,7 @@
 
                 foreach ($formErrors as $error) {
 
-                    echo '<div class="alert alert-danger">' . $error . '</div>';
+                    echo '<div class="alert alert-danger push">' . $error . '</div>';
                 }
 
 
@@ -275,13 +274,13 @@
 
                     // Echo Success Message
 
-                    $theMsg = "<div class='alert alert-success'>" . $stmt->rowCount() . ' Record Updated</div>';
+                    $theMsg = "<div class='alert alert-success push'>" . $stmt->rowCount() . ' Record Updated</div>';
 
                     redirectHome($theMsg);
                 }
             } else {
 
-                $theMsg = "<div class='alert alert-danger'>Sorry You Cant Browse This Page Directly</div>";
+                $theMsg = "<div class='alert alert-danger push'>Sorry You Cant Browse This Page Directly</div>";
 
                 redirectHome($theMsg, 'back');
             }
@@ -310,12 +309,12 @@
     
                 $stmt->execute();
     
-                $theMsg = "<div class='alert alert-success'>" . $stmt->rowCount() . ' Record Deleted</div>';
+                $theMsg = "<div class='alert alert-success push'>" . $stmt->rowCount() . ' Record Deleted</div>';
     
                 redirectHome($theMsg, 'back');
             } else {
     
-                $theMsg = "<div class='alert alert-danger'>This Id Is Not Exist</div>";
+                $theMsg = "<div class='alert alert-danger push'>This Id Is Not Exist</div>";
     
                 redirectHome($theMsg);
             }
@@ -343,12 +342,12 @@
     
                 $stmt->execute(array($itemid));
     
-                $theMsg = "<div class='alert alert-success'>" . $stmt->rowCount() . ' Record Approve</div>';
+                $theMsg = "<div class='alert alert-success push'>" . $stmt->rowCount() . ' Record Approve</div>';
     
                 redirectHome($theMsg);
             } else {
     
-                $theMsg = "<div class='alert alert-danger'>This Id Is Not Exist</div>";
+                $theMsg = "<div class='alert alert-danger push'>This Id Is Not Exist</div>";
     
                 redirectHome($theMsg);
             }

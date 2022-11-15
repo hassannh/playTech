@@ -58,7 +58,7 @@
 
         echo $theMsg;
         
-        echo "<div class='alert alert-info'>You Will Be Redirected To $link After $seconds Secondes.</div>";
+        echo "<div class='alert alert-info push'>You Will Be Redirected To $link After $seconds Secondes.</div>";
 
         header("refresh:$seconds;url=$url");
 

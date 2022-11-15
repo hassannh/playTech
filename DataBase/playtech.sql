@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 15, 2022 at 11:01 AM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 7.4.29
+-- Hôte : 127.0.0.1
+-- Généré le : mar. 15 nov. 2022 à 14:19
+-- Version du serveur : 10.4.24-MariaDB
+-- Version de PHP : 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `playtech`
+-- Base de données : `playtech`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `items`
+-- Structure de la table `items`
 --
 
 CREATE TABLE `items` (
@@ -36,10 +36,19 @@ CREATE TABLE `items` (
   `Image` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Déchargement des données de la table `items`
+--
+
+INSERT INTO `items` (`Item_ID`, `Name`, `Description`, `Price`, `Add_Date`, `Image`) VALUES
+(2, 'DSG', 'DSQB', 'QFB', '2022-11-15', 'Capture d\'écran_20221028_161221.png'),
+(3, 'GFSDH', 'FDH', 'FDHS', '2022-11-15', 'Capture d\'écran_20221031_110120.png'),
+(4, ' ', ' ', ' ', '2022-11-15', 'Capture d\'écran_20221028_161221.png');
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Structure de la table `users`
 --
 
 CREATE TABLE `users` (
@@ -51,43 +60,45 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `users`
+-- Déchargement des données de la table `users`
 --
 
 INSERT INTO `users` (`UserID`, `Username`, `Password`, `Email`, `FullName`) VALUES
-(1, 'hassan', '12345', 'hassannouhi91@gmail.com', 'hassan nouhi');
+(1, 'hassan', '12345', 'hassannouhi91@gmail.com', 'hassan nouhi'),
+(2, 'marouane', '123', 'uanemaro216@gmail.com', 'marouane'),
+(3, 'Youssef', '123', 'youssef@gmail.com', 'Youssef\r\n');
 
 --
--- Indexes for dumped tables
+-- Index pour les tables déchargées
 --
 
 --
--- Indexes for table `items`
+-- Index pour la table `items`
 --
 ALTER TABLE `items`
   ADD PRIMARY KEY (`Item_ID`);
 
 --
--- Indexes for table `users`
+-- Index pour la table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`UserID`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
--- AUTO_INCREMENT for table `items`
+-- AUTO_INCREMENT pour la table `items`
 --
 ALTER TABLE `items`
-  MODIFY `Item_ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `Item_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
-  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

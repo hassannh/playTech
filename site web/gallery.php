@@ -1,6 +1,12 @@
 <?php
-$pageTitle = 'Gallery';
+ob_start(); // Output Buffering Start 
+
+session_start();
+
+if (isset($_SESSION['Username'])) {
+    $pageTitle = 'Gallery';
     include 'init.php';
+    /* Start Gallery Page */
 ?>
 
 <div class="gallery">
@@ -232,7 +238,18 @@ $pageTitle = 'Gallery';
     </div>
 </div>
 
-<?php
-    include 'tmp/footer.php';
-    include 'tmp/script.php';
+
+<?php    /* End Gallery Page */
+
+include 'tmp/footer.php';
+include 'tmp/script.php';
+} else {
+
+    header('Location: index.php');
+
+    exit();
+}
+
+ob_end_flush(); // Release The Output
+
 ?>
