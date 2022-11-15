@@ -16,7 +16,6 @@ if (isset($_SESSION['Username'])) {
         <span><b>Mouses</b></span>
         <span><b>KeyBoards</b></span>
         <span><b>Screen</b></span>
-        <span><b>Central Units</b></span>
     </div>
     <div class="items">
         <div class="card" style="width: 18rem;">
