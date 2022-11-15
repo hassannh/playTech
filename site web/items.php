@@ -111,6 +111,7 @@
                 $image      =  $_POST['img_item'];
                 
                     // Insert Item info In The Database
+                    //cus cant merge sql with php
 
                     $stmt = $con->prepare("INSERT INTO 
                                 items(Name, Description, Price, Image, Add_Date)
@@ -126,8 +127,8 @@
                     
                     // Echo Success Message
 
-                    $theMsg = "<div class='alert alert-success push'>" . $stmt->rowCount() . ' Record Inserted </div>';
-
+                    $theMsg = "<div class='alert alert-success'>" . $stmt->rowCount() . ' Record Inserted </div>';
+                        //bach to previus page
                     redirectHome($theMsg, 'back');
                 
             } else {
@@ -153,7 +154,7 @@
 
             $stmt = $con->prepare("SELECT * FROM items WHERE Item_ID = ?");
 
-            // Execute Query
+            // Execute abouv code
 
             $stmt->execute(array($itemid));
 
@@ -223,42 +224,6 @@
                 $price      =  $_POST['price'];
                 $image    =  $_POST['img_item'];
 
-                // Validate The Form
-
-                $formErrors = array();
-
-                if (empty($user)) {
-
-                    $formErrors[] = 'Name Can\'t Be <strong>Empty</strong>';
-                }
-
-                if (empty($desc)) {
-
-                    $formErrors[] = 'Description Can\'t Be <strong>Empty</strong>';
-                }
-
-                if (empty($price)) {
-
-                    $formErrors[] = 'Price Can\'t Be <strong>Empty</strong>';
-                }
-
-                if (empty($image)) {
-
-                    $formErrors[] = 'Image Can\'t Be <strong>Empty</strong>';
-                }
-
-                // Loop Intro Errors Array And Echo It
-
-                foreach ($formErrors as $error) {
-
-                    echo '<div class="alert alert-danger push">' . $error . '</div>';
-                }
-
-
-                // Check If There's No Error Proceed The Update Operation
-
-                if (empty($formErrors)) {
-
                     // Update The Database With This Info
 
                     $stmt = $con->prepare("UPDATE
@@ -274,10 +239,10 @@
 
                     // Echo Success Message
 
-                    $theMsg = "<div class='alert alert-success push'>" . $stmt->rowCount() . ' Record Updated</div>';
+                    $theMsg = "<div class='alert alert-success'>" . $stmt->rowCount() . ' Record Updated</div>';
 
                     redirectHome($theMsg);
-                }
+                
             } else {
 
                 $theMsg = "<div class='alert alert-danger push'>Sorry You Cant Browse This Page Directly</div>";
@@ -288,11 +253,11 @@
             echo "</div>";
         } elseif ($do == 'Delete'){ // Delete Items Page
 
-            echo "<h1 class='text-center'>Update Item</h1>";
+            echo "<h1 class='text-center'>Delete Item</h1>";
             echo "<div class='container'>";
     
-            // Check If Get Request Item ID Is Numeric & Get The Integer Value Of It
-    
+            // Check If itemid not equal 0
+
             $itemid = isset($_GET['itemid']) && is_numeric($_GET['itemid']) ? intval($_GET['itemid']) : 0;
     
             // Select All Data Depend On This ID
@@ -309,7 +274,7 @@
     
                 $stmt->execute();
     
-                $theMsg = "<div class='alert alert-success push'>" . $stmt->rowCount() . ' Record Deleted</div>';
+                $theMsg = "<div class='alert alert-success'>" . $stmt->rowCount() . ' Record Deleted</div>';
     
                 redirectHome($theMsg, 'back');
             } else {
@@ -321,44 +286,15 @@
     
             echo "</div>";
 
-        } elseif ($do == 'Approve') {
+        } 
 
-            echo "<h1 class='text-center'>Approve Item</h1>";
-            echo "<div class='container'>";
-    
-            // Check If Get Request Item ID Is Numeric & Get The Integer Value Of It
-    
-            $itemid = isset($_GET['itemid']) && is_numeric($_GET['itemid']) ? intval($_GET['itemid']) : 0;
-    
-            // Select All Data Depend On This ID
-    
-            $check = checkItem('Item_ID', 'items', $itemid);
-    
-            // If There's Such The Form
-    
-            if ($check > 0) {
-    
-                $stmt = $con->prepare("UPDATE  items SET Approve = 1 WHERE Item_ID = ?");
-    
-                $stmt->execute(array($itemid));
-    
-                $theMsg = "<div class='alert alert-success push'>" . $stmt->rowCount() . ' Record Approve</div>';
-    
-                redirectHome($theMsg);
-            } else {
-    
-                $theMsg = "<div class='alert alert-danger push'>This Id Is Not Exist</div>";
-    
-                redirectHome($theMsg);
-            }
-    
-            echo "</div>";              
-        }
         echo "</div>"; 
         include 'tmp/footer.php';
         include 'tmp/script.php';
 
     } else{
+
+        //go to index
         
         header('Location: index.php');
 

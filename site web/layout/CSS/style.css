@@ -28,7 +28,7 @@ form.add_item{
     display: flex !important;
     flex-direction: column !important;
     width: 50% !important;
-    margin: 0 25% !important;
+    margin: 0% 25% !important;
     gap: 10px;
     padding-top: 100px;
 }
