@@ -13,7 +13,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $username = $_POST['user'];
     $password = $_POST['pass'];
-    $hashedPass = sha1($password);
 
     //Check If The User Exist In Database
 
@@ -26,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 AND
                                     Password = ? 
                                 LIMIT 1");
-    $stmt->execute(array($username, $hashedPass));
+    $stmt->execute(array($username, $password));
     $row = $stmt->fetch();
     $count = $stmt->rowCount();
 

@@ -37,6 +37,7 @@ form.add_item{
     width: 50% !important;
     margin: 20px 25% !important;
     gap: 10px;
+    padding-top: 100px;
 }
 .item {
     display: flex;

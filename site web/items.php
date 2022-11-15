@@ -37,8 +37,8 @@
             $items = $stmt->fetchAll();
     
         ?>
-<div class="push">
-<h1 class="text-center">Manage Items</h1>
+
+<h1 class="text-center push">Manage Items</h1>
 <div class="container">
     <div class="table-responsive">
         <table class="main-table text-center table table-bordered">
@@ -63,10 +63,6 @@
                             echo "<td>
                                 <a href='items.php?do=Edit&itemid=" . $item['Item_ID'] . "' class='btn btn-success'><i class='fa fa-edit'></i> Edit</a>
                                 <a href='items.php?do=Delete&itemid=" . $item['Item_ID'] . "' class='btn btn-danger confirm'><i class='fa fa-close'></i> Delete </a>";
-                                
-                                if ($item['Approve'] == 0) {
-                                    echo "<a href='items.php?do=Approve&itemid=" . $item['Item_ID'] . "' class='btn btn-info activate'><i class='fa fa-check'></i> Approve</a>";
-                                }
                             echo "</td>";
                             echo "</tr>";
                         }
@@ -210,6 +206,7 @@
 
                 <h1 class="text-center">Edit Item</h1>
                 <form class="add_item" action="?do=Update" method="POST">
+                <input type="hidden" name="itemid" value="<?php echo $itemid ?>">   
     <div class="item">
         <label class="input-group-text label_item" for="name">Nom de produit</label>
         <input type="text" class="form-control" name="name" placeholder="Name Of The Item" required="required">
@@ -228,7 +225,7 @@
     </div>
     <div class="submit_add">
         <i class="fa fa-plus add_plus"></i>
-        <input class="input-group-text input_submit" type="submit" value="  Ajouter le produit">
+        <input class="input-group-text input_submit" type="submit" value="  Save Item">
     </div>
 </form>
 <?php
