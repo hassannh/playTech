@@ -25,17 +25,17 @@ if (isset($_SESSION['Username'])) {
     <div class="items">
     <?php
         foreach($items as $item){
-            echo '<div class="card Control" style="width: 18rem;">';
+            echo '<div class="card All ' . $item['categories'] . '" style="width: 18rem;">';
                 echo '<div class="item_img">';
-                    echo '<img src="layout/image/items/r.jpg" class="card-img-top" alt="...">';
+                    echo '<img src="layout/image/items/' . $item['Image'] . '" class="card-img-top" alt="...">';
                 echo '</div>';
                 echo '<div class="card-body">';
-                    echo '<h5 class="card-title">Card title</h5>';
-                    echo '<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card\'s content.</p>';
+                    echo '<h5 class="card-title">' . $item['Name'] . '</h5>';
+                    echo '<p class="card-text">' . $item['Description'] . '</p>';
                     echo '<div class="btn" style=" display: flex; gap: 10px; ">';
                         echo '<div class="item_buy">';
-                            echo '<span class="item_price btn btn-primary">$15</span>';
-                            echo '<i class="fa fa-cart-arrow-down btn btn-primary" aria-hidden="true"></i>';
+                            echo '<span class="item_price btn btn-primary">' . $item['Price'] . '</span>';
+                            echo '<i class="fa fa-cart-arrow-down btn btn-primary" id="' . $item['Item_ID'] . '" aria-hidden="true"></i>';
                         echo '</div>';
                     echo '</div>';
                 echo '</div>';
