@@ -249,6 +249,48 @@
 
                     // Update The Database With This Info
 
+
+                    if(empty($category) && $category === ' ' ){
+
+                        $stmt = $con->prepare("UPDATE
+                        items 
+                    SET 
+                        Name = ?,  
+                        Description = ?, 
+                        Price = ?, 
+                        Image = ?
+                    WHERE 
+                        Item_ID = ?");
+                        $stmt->execute(array($name, $desc, $price, $image, $id));
+
+                    }elseif (empty($image) && $image === ' ' ){
+
+
+                        $stmt = $con->prepare("UPDATE
+                        items 
+                    SET 
+                        Name = ?,  
+                        Description = ?, 
+                        Price = ?, 
+                        categories = ?
+                    WHERE 
+                        Item_ID = ?");
+                        $stmt->execute(array($name, $desc, $price, $category, $id));
+
+                    }elseif(empty($category) && $category === ' ' && (empty($image) && $image === ' ' ) ){
+
+                        $stmt = $con->prepare("UPDATE
+                        items 
+                    SET 
+                        Name = ?,  
+                        Description = ?, 
+                        Price = ?
+                    WHERE 
+                        Item_ID = ?");
+                        $stmt->execute(array($name, $desc, $price, $id));
+
+                    }
+
                     $stmt = $con->prepare("UPDATE
                                                 items 
                                             SET 
