@@ -200,12 +200,12 @@
     </div>   
     <div class="item">
         <label class="input-group-text label_item" for="img_item">Image de produit</label>
-        <input class="form-control input_item" type="file" name="img_item" accept="image/png, image/jpeg, image/jpg" required="required">
+        <input class="form-control input_item" type="file" name="img_item" accept="image/png, image/jpeg, image/jpg">
 
     </div>
+    <?php echo $item['categories'] ?>
     <select class="form-select input-group-text" value="<?php echo $item['categories'] ?>" name="categories">
-        <option selected Disabled>Categories</option>
-        <option value="All">All</option>
+        <option disabled selected><?php echo $item['categories']  ?></option>
         <option value="Games">Games</option>
         <option value="Mouses">Mouses</option>
         <option value="KeyBoards">KeyBoards</option>
