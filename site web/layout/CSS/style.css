@@ -188,8 +188,9 @@ form.add_item{
     padding: 20px 50px;
 }
 .item_img img{
-    width: 100%;
+    width: 186.4px;
     border-radius: 20px;
+    height: 186.4px;
 }
 .item_buy{
     display: flex;
