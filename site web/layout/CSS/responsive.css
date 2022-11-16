@@ -23,7 +23,7 @@
         width: 200PX;
     }
     .gallery .select{
-        width: 1500px;
+        width: 1500px !important;
 
     }
 }
