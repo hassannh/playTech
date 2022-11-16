@@ -1,5 +1,5 @@
 <?php
-
+// connect data base with website
 $dsn = 'mysql:host=localhost;dbname=playtech';
 $user = 'root';
 $pass = '';
