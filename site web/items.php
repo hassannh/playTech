@@ -93,7 +93,6 @@
     </div>
     <select class="form-select input-group-text" name="categories">
         <option selected Disabled>Categories</option>
-        <option value="All">All</option>
         <option value="Games">Games</option>
         <option value="Mouses">Mouses</option>
         <option value="KeyBoards">KeyBoards</option>
@@ -269,6 +268,7 @@
                         $stmt = $con->prepare("UPDATE
                         items 
                     SET 
+                    
                         Name = ?,  
                         Description = ?, 
                         Price = ?, 
