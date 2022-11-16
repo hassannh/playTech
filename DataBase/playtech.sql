@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 15 nov. 2022 à 15:55
--- Version du serveur : 10.4.24-MariaDB
--- Version de PHP : 7.4.29
+-- Généré le :  mar. 15 nov. 2022 à 21:01
+-- Version du serveur :  10.1.36-MariaDB
+-- Version de PHP :  7.2.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `playtech`
+-- Base de données :  `playtech`
 --
 
 -- --------------------------------------------------------
@@ -33,7 +34,8 @@ CREATE TABLE `items` (
   `Description` varchar(300) NOT NULL,
   `Price` varchar(300) NOT NULL,
   `Add_Date` date NOT NULL,
-  `Image` varchar(300) NOT NULL
+  `Image` varchar(300) NOT NULL,
+  `categories` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
