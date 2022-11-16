@@ -289,7 +289,7 @@
                         Item_ID = ?");
                         $stmt->execute(array($name, $desc, $price, $id));
 
-                    }
+                    }else{
 
                     $stmt = $con->prepare("UPDATE
                                                 items 
@@ -302,6 +302,7 @@
                                             WHERE 
                                                 Item_ID = ?");
                     $stmt->execute(array($name, $desc, $price, $image, $category, $id));
+                    }
 
                     // Echo Success Message
 
