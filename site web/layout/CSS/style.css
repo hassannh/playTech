@@ -168,7 +168,7 @@ form.add_item{
     display: flex;
 }
 .gallery .select{
-    width: 30%;
+    width: 200px;
     background-color: aliceblue;
 }
 .gallery .select::-webkit-scrollbar {
@@ -185,6 +185,8 @@ form.add_item{
     flex-wrap: wrap;
     justify-content: space-evenly;
     row-gap: 40px;
+    width: 1000px;
+    margin-left: 36px;
 }
 .item_img{
     width: 100%;

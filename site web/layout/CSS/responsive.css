@@ -23,6 +23,9 @@
         width: 200PX;
     }
     .gallery .select{
-        width: 1600PX;
+        width: 340px;
+    }
+    .items {
+        margin-left: 9px;
     }
 }
