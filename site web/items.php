@@ -245,26 +245,13 @@
                 $desc           =  $_POST['description'];
                 $price          =  $_POST['price'];
                 $image          =  $_POST['img_item'];
-                $category       =  $_POST['categories'];
+                $category       ;
+                if (isset($_POST['categories']))$category       =  $_POST['categories'];
 
                     // Update The Database With This Info
 
 
-                    if(empty($category) && $category === ' ' ){
-
-                        $stmt = $con->prepare("UPDATE
-                        items 
-                    SET 
-                        Name = ?,  
-                        Description = ?, 
-                        Price = ?, 
-                        Image = ?
-                    WHERE 
-                        Item_ID = ?");
-                        $stmt->execute(array($name, $desc, $price, $image, $id));
-
-                    }elseif (empty($image) && $image === ' ' ){
-
+                    if(!empty($category) && $category != ' ' ){ //update category
 
                         $stmt = $con->prepare("UPDATE
                         items 
@@ -277,8 +264,35 @@
                         Item_ID = ?");
                         $stmt->execute(array($name, $desc, $price, $category, $id));
 
-                    }elseif(empty($category) && $category === ' ' && (empty($image) && $image === ' ' ) ){
+                    }elseif (!empty($image) && $image != ' ' ){//update image
 
+                        $stmt = $con->prepare("UPDATE
+                        items 
+                    SET 
+                        Name = ?,  
+                        Description = ?, 
+                        Price = ?, 
+                        Image = ?
+                    WHERE 
+                        Item_ID = ?");
+                        $stmt->execute(array($name, $desc, $price, $image, $id));
+
+                        //update category and image
+                    }elseif((!empty($category) && $category != ' ') && (!empty($image) && $image != ' ' ) ){
+
+                        $stmt = $con->prepare("UPDATE
+                        items 
+                    SET 
+                        Name = ?,  
+                        Description = ?, 
+                        Price = ?, 
+                        Image = ?,
+                        categories = ?
+                    WHERE 
+                        Item_ID = ?");
+                        $stmt->execute(array($name, $desc, $price, $image, $category, $id));
+
+                    }else{
                         $stmt = $con->prepare("UPDATE
                         items 
                     SET 
@@ -288,20 +302,6 @@
                     WHERE 
                         Item_ID = ?");
                         $stmt->execute(array($name, $desc, $price, $id));
-
-                    }else{
-
-                    $stmt = $con->prepare("UPDATE
-                                                items 
-                                            SET 
-                                                Name = ?,  
-                                                Description = ?, 
-                                                Price = ?, 
-                                                Image = ?,
-                                                categories = ?
-                                            WHERE 
-                                                Item_ID = ?");
-                    $stmt->execute(array($name, $desc, $price, $image, $category, $id));
                     }
 
                     // Echo Success Message
