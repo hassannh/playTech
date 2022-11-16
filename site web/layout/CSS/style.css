@@ -168,14 +168,16 @@ form.add_item{
     display: flex;
 }
 .gallery .select{
-    display: flex;
-    flex-direction: column;
     width: 25%;
     background-color: aliceblue;
-    gap: 20px;
-    padding: 10px;
-    margin-right: 10px;
+}
+.gallery .select::-webkit-scrollbar {
+    display: none;
+  }
+.select_op{
     cursor: pointer;
+    margin-bottom: 20px;
+    font-family: bold;
 }
 .items{
     display: flex;

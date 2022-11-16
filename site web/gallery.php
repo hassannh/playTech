@@ -10,13 +10,14 @@ if (isset($_SESSION['Username'])) {
 ?>
 
 <div class="gallery">
-    <div class="select">
-        <span><b>All</b></span>
-        <span><b>Games</b></span>
-        <span><b>Mouses</b></span>
-        <span><b>KeyBoards</b></span>
-        <span><b>Screen</b></span>
-    </div>
+        <select id="category" class="form-select select" multiple aria-label="multiple select example">
+                <option class="select_op" value="All" selected>All</option>
+                <option class="select_op" value="Games">Games</option>
+                <option class="select_op" value="Mouses">Mouses</option>
+                <option class="select_op" value="KeyBoards">KeyBoards</option>
+                <option class="select_op" value="Screen">Screen</option>
+                <option class="select_op" value="Control">Remote control</option>
+            </select>
     <div class="items">
         <div class="card" style="width: 18rem;">
             <div class="item_img">
