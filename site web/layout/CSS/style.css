@@ -168,7 +168,7 @@ form.add_item{
     display: flex;
 }
 .gallery .select{
-    width: 25%;
+    width: 30%;
     background-color: aliceblue;
 }
 .gallery .select::-webkit-scrollbar {
