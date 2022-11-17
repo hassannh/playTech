@@ -202,8 +202,7 @@
         <input class="form-control input_item" type="file" name="img_item" accept="image/png, image/jpeg, image/jpg">
 
     </div>
-    <?php echo $item['categories'] ?>
-    <select class="form-select input-group-text" value="<?php echo $item['categories'] ?>" name="categories">
+    <select class="form-select input-group-text" name="categories">
         <option disabled selected><?php echo $item['categories']  ?></option>
         <option value="Games">Games</option>
         <option value="Mouses">Mouses</option>
@@ -217,7 +216,7 @@
 </form>
 <?php
 
-                // If There's No Show Error Message
+                // If not find id if id=0 OR something else
 
             } else {
 
