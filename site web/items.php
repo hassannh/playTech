@@ -46,6 +46,7 @@
                 <td>#ID</td>
                 <td>Name</td>
                 <td>Description</td>
+                <td>Quantity</td>
                 <td>Price</td>
                 <td>Adding Date</td>
                 <td>Control</td>
@@ -58,6 +59,7 @@
                                 echo "<td>" . $item['Item_ID'] . "</td>";
                                 echo "<td>" . $item['Name'] . "</td>";
                                 echo "<td>" . $item['Description'] . "</td>";
+                                echo "<td>" . $item['quantity'] . "</td>";
                                 echo "<td>" . $item['Price'] . "</td>";
                                 echo "<td>" . $item['Add_Date'] . "</td>";
                                 echo "<td>
@@ -82,6 +84,13 @@
         <label class="input-group-text label_item" for="description">Description de produit</label>
         <input type="text" class="form-control" name="description" placeholder="Description Of The Item" required="required">
     </div>
+    <div class="item">
+        <label class="input-group-text label_item" for="quantity">Quantity</label>
+        <input type="text" class="form-control" name="quantity" placeholder="quantity" required="required">
+    </div>
+
+
+
     <div class="item">
         <label class="input-group-text label_item" for="prix_item">Prix de produit</label>
         <input type="text" class="form-control" name="price" placeholder="Price Of The Item" required="required">
@@ -116,6 +125,7 @@
 
                 $name           =  $_POST['name'];
                 $desc           =  $_POST['description'];
+                $quan           =  $_POST['Quantity'];
                 $price          =  $_POST['price'];
                 $image          =  $_POST['img_item'];
                 $category       =  $_POST['categories'];
@@ -125,12 +135,13 @@
                     //cus cant merge sql with php
 
                     $stmt = $con->prepare("INSERT INTO 
-                                items(Name, Description, Price, Image, Add_Date, categories)
-                            VALUES(:zname, :zdesc, :zprice, :zimage, now(), :zcategory)");
+                                items(Name, Description, quantity, Price, Image, Add_Date, categories)
+                            VALUES(:zname, :zdesc, :zquan, :zprice, :zimage, now(), :zcategory)");
                     $stmt->execute(array(
 
                         'zname'     => $name,
                         'zdesc'     => $desc,
+                        'zquan'     => $quan,
                         'zprice'    => $price,
                         'zimage'  => $image,
                         'zcategory'  => $category
@@ -194,6 +205,10 @@
         <input type="text" class="form-control" name="description" value="<?php echo $item['Description'] ?>" required="required">
     </div>
     <div class="item">
+        <label class="input-group-text label_item" for="quantity">Quantity</label>
+        <input type="text" class="form-control" name="quantity" value="<?php echo $item['quantity'] ?>"  required="required">
+    </div>
+    <div class="item">
         <label class="input-group-text label_item" for="prix_item">Prix de produit</label>
         <input type="text" class="form-control" name="price" value="<?php echo $item['Price'] ?>" required="required">
     </div>   
@@ -241,6 +256,7 @@
                 $id             =  $_POST['itemid'];
                 $name           =  $_POST['name'];
                 $desc           =  $_POST['description'];
+                $quan           =  $_POST['quantity'];
                 $price          =  $_POST['price'];
                 $image          =  $_POST['img_item'];
                 $category       ;
@@ -256,11 +272,12 @@
                     SET 
                         Name = ?,  
                         Description = ?, 
+                        quantity = ?,
                         Price = ?, 
                         categories = ?
                     WHERE 
                         Item_ID = ?");
-                        $stmt->execute(array($name, $desc, $price, $category, $id));
+                        $stmt->execute(array($name, $desc, $quan, $price, $category, $id));
 
                     }elseif (!empty($image) && $image != ' ' ){//update image
 
@@ -270,11 +287,12 @@
                     
                         Name = ?,  
                         Description = ?, 
+                        quantity = ?,
                         Price = ?, 
                         Image = ?
                     WHERE 
                         Item_ID = ?");
-                        $stmt->execute(array($name, $desc, $price, $image, $id));
+                        $stmt->execute(array($name, $desc, $quan, $price, $image, $id));
 
                         //update category and image
                     }elseif((!empty($category) && $category != ' ') && (!empty($image) && $image != ' ' ) ){
@@ -284,12 +302,13 @@
                     SET 
                         Name = ?,  
                         Description = ?, 
+                        quantity = ?,
                         Price = ?, 
                         Image = ?,
                         categories = ?
                     WHERE 
                         Item_ID = ?");
-                        $stmt->execute(array($name, $desc, $price, $image, $category, $id));
+                        $stmt->execute(array($name, $desc, $quan, $price, $image, $category, $id));
 
                     }else{
                         $stmt = $con->prepare("UPDATE
@@ -297,10 +316,11 @@
                     SET 
                         Name = ?,  
                         Description = ?, 
+                        quantity = ?,
                         Price = ?
                     WHERE 
                         Item_ID = ?");
-                        $stmt->execute(array($name, $desc, $price, $id));
+                        $stmt->execute(array($name, $desc, $quan, $price, $id));
                     }
 
                     // Echo Success Message
