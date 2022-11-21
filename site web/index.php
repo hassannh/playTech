@@ -6,7 +6,7 @@ $noNavbar = '';
 $pageTitle = 'Login';
 
 if (isset($_SESSION['Username'])) {
-    header('Location: home.php'); // Redirect To Home page
+    header('Location: home.php'); // go To Home page
 }
 include 'init.php';
 // Check If User Coming From HTTP Post Request
@@ -32,6 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $count = $stmt->rowCount();
 
     // If Count > 0 This Mean The Database Contain Record About This Username
+    //
 
     if ($count > 0) {
         $_SESSION['Username'] = $username; // Register Session Name
@@ -40,6 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit();
     }
 }
+//action :last thing you bring from database
 ?>
 
 <form class="login" action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">

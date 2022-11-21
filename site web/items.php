@@ -19,6 +19,8 @@
         $do = isset($_GET['do']) ? $_GET['do'] : 'Manage';
 
         if ($do == 'Manage'){ // Manage Items Page 
+
+            //select all items from table items
     
             $stmt = $con->prepare("SELECT
                                         items.*
@@ -155,6 +157,7 @@
                     redirectHome($theMsg, 'back');
                 
             } else {
+                //else if someone try to log in with url
 
                 echo "<div class='container'>";
 
@@ -185,7 +188,7 @@
 
             $item = $stmt->fetch();
 
-            // The Row Count
+            // add one if it found it
 
             $count = $stmt->rowCount();
 
@@ -260,7 +263,9 @@
                 $price          =  $_POST['price'];
                 $image          =  $_POST['img_item'];
                 $category       ;
-                if (isset($_POST['categories']))$category       =  $_POST['categories'];
+                if (isset($_POST['categories'])){
+                    $category =  $_POST['categories'];
+                }
 
                     // Update The Database With This Info
 
@@ -330,6 +335,7 @@
                     redirectHome($theMsg);
                 
             } else {
+                //if someone try to log in from url
 
                 $theMsg = "<div class='alert alert-danger push'>Sorry You Cant Browse This Page Directly</div>";
 

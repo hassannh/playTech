@@ -16,7 +16,7 @@
 
         } else {
 
-            echo 'Default';
+            echo 'Playtech';
 
         }
     }
@@ -35,7 +35,7 @@
 
             $url = 'index.php';
 
-            $link = 'HomePage';
+            $link = 'log-in';
 
         } else {
 
@@ -50,7 +50,7 @@
 
                 $url = 'index.php';
 
-                $link = 'HomePage';
+                $link = 'log-in';
 
             }
 
