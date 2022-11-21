@@ -64,9 +64,9 @@
                                 echo "<td>" . $item['quantity'] . "</td>";
                                 echo "<td>" . $item['Price'] . "</td>";
                                 echo "<td>" . $item['Add_Date'] . "</td>";
-                                echo "<td>
-                                    <a href='items.php?do=Edit&itemid=" . $item['Item_ID'] . "' class='btn btn-success'><i class='fa fa-edit'></i> Edit</a>
-                                    <a href='items.php?do=Delete&itemid=" . $item['Item_ID'] . "' class='btn btn-danger confirm'><i class='fa fa-close'></i> Delete </a>";
+                                echo '<td class="controol">';
+                                    echo "<a href='items.php?do=Edit&itemid=" . $item['Item_ID'] . "' class='btn btn-success'><i class='fa fa-edit'></i> Edit</a>";
+                                    echo "<a href='items.php?do=Delete&itemid=" . $item['Item_ID'] . "' class='btn btn-danger confirm'><i class='fa fa-close'></i> Delete </a>";
                                 echo "</td>";
                             echo "</tr>";
                         }
