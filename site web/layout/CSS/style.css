@@ -1,19 +1,22 @@
-.push{
+.push {
     padding-top: 100px;
 }
+
 /******************\
 |** Start  Login **|
 \******************/
-    .login{
-        display: flex;
-        flex-direction: column;
-        width: 30%;
-        margin: 18.5% 35%;
-        gap: 10px;
-    }
-    .submit{
-        width: 100%;
-    }
+.login {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 18.5% 35%;
+    gap: 10px;
+}
+
+.submit {
+    width: 100%;
+}
+
 /******************\
 |*** End  Login ***|
 \******************/
@@ -23,7 +26,7 @@
 \******************/
 
 
-form.add_item{
+form.add_item {
     display: flex !important;
     flex-direction: column !important;
     width: 50% !important;
@@ -31,26 +34,30 @@ form.add_item{
     gap: 10px;
     padding-top: 100px;
 }
+
 .item {
     display: flex;
 }
+
 .label_item {
     width: 245px;
     margin-right: 2%;
 
 }
 
-    .controol {
+.controol {
     GAP: 10PX;
     DISPLAY: flex;
     FLEX-WRAP: WRAP;
     JUSTIFY-CONTENT: center;
 
 }
+
 .input_item {
     width: 73%;
     border-radius: 0.25rem;
 }
+
 .submit_add {
     width: 30%;
     margin: 0 35%;
@@ -58,10 +65,11 @@ form.add_item{
     align-items: center;
 }
 
-.alert{
-   position: absolute;
-   top: 100px;
+.alert {
+    position: absolute;
+    top: 100px;
 }
+
 /******************\
 |**** End Drop ****|
 \******************/
@@ -73,10 +81,11 @@ form.add_item{
 |*** Start home ***|
 \******************/
 
-.backgrouandtech{
+.backgrouandtech {
     width: 100%;
 }
-.aboutU{
+
+.aboutU {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -84,41 +93,51 @@ form.add_item{
 
 
 }
-.aboutU-img{
+
+.aboutU-img {
     width: 540px;
 }
-.aboutU-img img{
+
+.aboutU-img img {
     width: 100%;
     border-radius: 15px;
 }
-.aboutU-desc{
+
+.aboutU-desc {
     width: 540px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
 }
-.Manager{
+
+.Manager {
     margin-top: 50px;
     background-color: #E5E5E5;
     padding: 20px;
 }
+
 .Manager .aboutU-img {
     padding: 5%;
 }
-.Manager .aboutU-img img{
+
+.Manager .aboutU-img img {
     width: 100%;
 }
-.aboutU-desc{
+
+.aboutU-desc {
     font-size: 27px;
     text-align: justify;
 }
-.aboutU-desc span{
+
+.aboutU-desc span {
     color: #2C3E7E;
 }
-.aboutU-desc p{
+
+.aboutU-desc p {
     color: #6b6f70;
 }
+
 .services {
     display: flex;
     flex-wrap: wrap;
@@ -126,33 +145,40 @@ form.add_item{
     margin-top: 40px;
     gap: 10px;
 }
-.service_title{
+
+.service_title {
     text-align: center;
     margin-top: 20px;
 }
+
 .service {
     width: 252px;
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     padding: 0 7px;
     border-radius: 15px;
 }
-.Add{
-    background-color:#3498db ;
+
+.Add {
+    background-color: #3498db;
 }
-.Edit{
-    background-color:#8e44ad;
+
+.Edit {
+    background-color: #8e44ad;
 }
-.Delete{
-    background-color:#c0392b ;
+
+.Delete {
+    background-color: #c0392b;
 }
-.Buy{
-    background-color:#d35400 ;
+
+.Buy {
+    background-color: #d35400;
 }
 
 .service span {
     justify-content: center;
     display: flex;
 }
+
 .service i {
     justify-content: center;
     display: flex;
@@ -161,10 +187,12 @@ form.add_item{
     font-size: 44px;
     color: white;
 }
+
 .service p {
     color: #d8dbdc;
     text-align: justify;
 }
+
 /******************\
 |**** End Home ****|
 \******************/
@@ -174,24 +202,27 @@ form.add_item{
 |* Start  Gallery *|
 \******************/
 
-.gallery{
+.gallery {
     padding-top: 100px;
     display: flex;
 }
-.gallery .select{
+
+.gallery .select {
     width: 200px;
     background-color: aliceblue;
 }
+
 .gallery .select::-webkit-scrollbar {
     display: none;
-  }
-.select_op{
+}
+
+.select_op {
     cursor: pointer;
     margin-bottom: 20px;
     font-family: bold;
 }
 
-.items{
+.items {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -199,29 +230,34 @@ form.add_item{
     width: 1000px;
     margin-left: 36px;
 }
-.item_img{
+
+.item_img {
     width: 100%;
     padding: 20px 50px;
 }
-.item_img img{
+
+.item_img img {
     width: 186.4px;
     border-radius: 20px;
     height: 186.4px;
 }
-.item_buy{
+
+.item_buy {
     display: flex;
     justify-content: space-evenly;
     width: -webkit-fill-available;
     align-items: center;
 }
-.item_buy{
+
+.item_buy {
     display: flex;
     gap: 10px;
     width: 187%;
     margin-left: -67px;
     justify-content: center;
 }
-.item_price{
+
+.item_price {
     cursor: default;
 }
 
@@ -243,7 +279,8 @@ footer {
     flex-wrap: wrap;
     flex-direction: column;
 }
-.logo_footer a{
+
+.logo_footer a {
     text-decoration: none;
 }
 

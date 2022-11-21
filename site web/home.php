@@ -16,7 +16,7 @@ if (isset($_SESSION['Username'])) {
 </div>
 
 
-<div class="aboutU">
+<div style="padding: 20px;"class="aboutU">
     <div class="aboutU-img">
         <img src="layout/image/home-block1.png" alt="storPic">
     </div>
@@ -32,7 +32,7 @@ if (isset($_SESSION['Username'])) {
 </div>
 
 
-<div class="aboutU Manager">
+<div style="padding: 20px;" class="aboutU Manager">
     <div class="aboutU-desc">
         <span><b>What Our Manager Said</b></span>
         <p>Lorem, ipsum dolor sit amet
