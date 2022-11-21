@@ -72,6 +72,7 @@ form.add_item{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    padding: 20px !important;
 }
 .aboutU-img{
     width: 540px;
@@ -90,6 +91,7 @@ form.add_item{
 .Manager{
     margin-top: 50px;
     background-color: #E5E5E5;
+    padding: 20px !important;
 }
 .Manager .aboutU-img {
     padding: 5%;

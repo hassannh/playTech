@@ -33,11 +33,7 @@
     }
     .items {
         margin-left: 9px;
-    }
-    .aboutU{
-        
-    }
-}
+    }}
 @media (max-width:360px){
     .submit{
         width: 64px;
