@@ -1,7 +1,6 @@
 <?php
 
     /*
-    ** Title Function v1.O
     ** Title Function That Echo The Page Title In Case The Page
     ** Has The Variable $pageTitle And Echo Default Title For Other Pages
     */
@@ -22,7 +21,7 @@
     }
 
     /*
-    ** Home Redirect Function v2.0
+    ** Home Redirect Function
     ** This Function Accept Parameters
     ** $errorMsg = Echo The Message [ Error | Success | Warning ]
     ** $url = The Link You Want To Redirect To
@@ -71,7 +70,7 @@
     ** Function To Check Item In Database[ Function Accept Parameters ]
     ** $select = The Item To Select [ Example: user, item, category ]
     ** $from = The Table To Select [ Example: users, items, categories ]
-    ** $value =The Value Of Select [ Example: marouane, box, electronics ]
+    ** $value =The Value Of Select [ Example: marouane,hassan, box, electronics ]
     */
 
     function checkItem($select, $from, $value) {
@@ -89,7 +88,7 @@
     }
 
     /*
-    ** Count Number Of Items Function v1.0
+    ** Count Number Of Items Function
     ** Function To Count Numbers Of Items Rows 
     ** $item = The Item To Count
     ** $table = The Table To Choose From

@@ -1,7 +1,7 @@
 <footer class="navbar-light bg-light">
         <div class="logo_footer navbar-brand">
             <a href="home.php">
-                <img src="layout/image/playtech-logo.png" alt="logo">
+                <img src="layout/image/playtech-logo.png" alt="Playtech_logo">
             </a>
         </div>
         <div class="grid_footer">

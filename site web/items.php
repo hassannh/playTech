@@ -364,7 +364,6 @@ if (isset($_SESSION['Username'])) {
         $check = checkItem('Item_ID', 'items', $itemid);
 
         // If There's Such The Form
-
         if ($check > 0) {
 
             $stmt = $con->prepare("DELETE FROM items WHERE Item_ID = :zid");

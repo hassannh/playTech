@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Games ,PS4 ,Laptop ,Mouses">
+    <meta name="description" content="Buy Games ,PS4 Control and Mouses and laptops">
     <link rel="shortcut icon" href="layout/image/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="layout/css/style.css">
     <link rel="stylesheet" href="layout/css/responsive.css">

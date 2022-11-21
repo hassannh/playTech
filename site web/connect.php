@@ -8,10 +8,10 @@ $option = array(
     //PDO (PHP Data Objects)
 );
 
-try {
-    //check if data base there
+try { //try to connect with db
+    //start new connection with PDO class
     $con = new PDO($myserver, $user, $pass, $option);
-    //connect data with data base
+    //connect data with db
     $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     echo 'failed' . $e->getMessage();
