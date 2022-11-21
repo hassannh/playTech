@@ -41,7 +41,7 @@ if (isset($_SESSION['Username'])) {
                         echo '<h5 class="card-title">' . $item['Name'] . '</h5>';
                         echo '<p class="card-text">' . $item['Description'] . '</p>';
                         echo '<div class="btn item_buy" style=" display: flex; gap: 10px; ">';
-                             echo '<span class="item_price btn btn-primary">' . $item['Price'] . '</span>';;
+                            echo '<span class="item_price btn btn-primary">' . $item['Price'] . '</span>';
                             echo '<i onclick=\'alert("you buy a ' . $item['Name'] . ' with ' . $item['Price'] . '  your item will delevred!!")\' class="fa fa-cart-arrow-down btn btn-primary" id="' . $item['Item_ID'] .' " aria-hidden="true"></i>';
                         echo '</div>';
                     echo '</div>';
