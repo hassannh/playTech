@@ -37,11 +37,10 @@
             $link = 'log-in';
 
         } else {
-
+                    //if data exest from form and not empty
             if (isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER'] !== '') {
 
                 $url = $_SERVER['HTTP_REFERER'];
-
 
                 $link = 'Previous Page';
 
@@ -73,11 +72,11 @@
     ** $value =The Value Of Select [ Example: marouane,hassan, box, electronics ]
     */
 
-    function checkItem($select, $from, $value) {
+    function checkItem($item, $items, $value) {
 
         global $con;
 
-        $statement = $con->prepare("SELECT $select FROM $from WHERE $select = ?");
+        $statement = $con->prepare("SELECT $item FROM $items WHERE $item = ?");
 
         $statement->execute(array($value));
 

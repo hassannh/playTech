@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="Games ,PS4 ,Laptop ,Mouses">
     <meta name="description" content="Buy Games ,PS4 Control and Mouses and laptops">
-    <link rel="shortcut icon" href="layout/image/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="layout/css/style.css">
     <link rel="stylesheet" href="layout/css/responsive.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">

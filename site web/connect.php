@@ -12,6 +12,7 @@ try { //try to connect with db
     //start new connection with PDO class
     $con = new PDO($myserver, $user, $pass, $option);
     //connect data with db
+    // set the PDO error mode to exception
     $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     echo 'failed' . $e->getMessage();

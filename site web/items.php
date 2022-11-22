@@ -156,7 +156,7 @@ if (isset($_SESSION['Username'])) {
             // Echo Success Message
 
             $theMsg = "<div class='alert alert-success'>" . $stmt->rowCount() . ' Record Inserted </div>';
-            //bach to previus page
+            //back to previus page
             redirectHome($theMsg, 'back');
 
         } else {
@@ -175,7 +175,8 @@ if (isset($_SESSION['Username'])) {
 
     } elseif ($do == 'Edit') { // Edit Page 
 
-        // Check If Get Request Item Is Numeric & Get The Integer Value Of It
+        // Check If Get Request Item Is Numeric 
+        // intval Get The Integer Value Of It
 
         $itemid = isset($_GET['itemid']) && is_numeric($_GET['itemid']) ? intval($_GET['itemid']) : 0;
 
