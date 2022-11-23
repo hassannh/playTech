@@ -129,7 +129,7 @@ if (isset($_SESSION['Username'])) {
 
             $name = $_POST['name'];
             $desc = $_POST['description'];
-            $quan = $_POST['Quantity'];
+            $quan = $_POST['quantity'];
             $price = $_POST['price'];
             $image = $_POST['img_item'];
             $category = $_POST['categories'];
