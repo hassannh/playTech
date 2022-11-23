@@ -3,7 +3,7 @@
 let category = document.querySelector('#category')
 
 let cards = document.querySelectorAll('.card')
-console.log(cards);
+// console.log(cards);
 
 category.addEventListener('change', function(){
   console.log(category.value);
