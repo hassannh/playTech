@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Nov 17, 2022 at 04:48 PM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 7.4.29
+-- Hôte : 127.0.0.1
+-- Généré le : mer. 23 nov. 2022 à 09:41
+-- Version du serveur : 10.4.24-MariaDB
+-- Version de PHP : 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `playtech`
+-- Base de données : `playtech`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `items`
+-- Structure de la table `items`
 --
 
 CREATE TABLE `items` (
@@ -39,10 +39,11 @@ CREATE TABLE `items` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `items`
+-- Déchargement des données de la table `items`
 --
 
 INSERT INTO `items` (`Item_ID`, `Name`, `Description`, `quantity`, `Price`, `Add_Date`, `Image`, `categories`) VALUES
+(1, 'mannette', 'mannette ps4 ', 10000, '300dh', '2022-11-16', 'r.jpg', 'Control'),
 (2, 'mannette', 'mannette ps4 ', 10000, '300dh', '2022-11-16', 'r2.jpg', 'Control'),
 (3, 'mannette', 'mannette ps4 ', 213, '400dh', '2022-11-16', 'r3.jpg', 'Control'),
 (4, 'mannette', 'mannette ps4 ', 213, '500dh', '2022-11-16', 'r4.jpg', 'Control'),
@@ -54,17 +55,19 @@ INSERT INTO `items` (`Item_ID`, `Name`, `Description`, `quantity`, `Price`, `Add
 (10, 'Grand Theft Auto V', 'games', 421, '40dh', '2022-11-16', 'g2.jpg', 'Games'),
 (11, 'Efootball 2023', 'game of football', 12, '50dh', '2022-11-16', 'g3.jpg', 'Games'),
 (12, 'Fortnite', 'game', 444, '10dh', '2022-11-16', 'g4.jpg', 'Games'),
-(15, 'clavier', 'clavier', 44, '4000dh', '2022-11-16', 'k3.jpg', 'KeyBoards'),
-(21, 'mouse', 'mouse', 33, '120dh', '2022-11-16', 'm.jpg', 'Mouses'),
-(22, 'keyboard', 'keyboard', 45, '230dh', '2022-11-16', 'k4.jpg', 'KeyBoards'),
-(23, 'mouse', 'mouse', 30, '700dh', '2022-11-16', 'm2.jpg', 'Mouses'),
-(24, 'mouse', 'mouse', 30, '200dh', '2022-11-16', 'm3.jpg', 'Mouses'),
-(25, 'mouse', 'mouse', 20, '10000dh', '2022-11-16', 'm4.jpg', 'Mouses');
+(13, 'clavier', 'clavier', 44, '4000dh', '2022-11-16', 'k3.jpg', 'KeyBoards'),
+(14, 'mouse', 'mouse', 33, '120dh', '2022-11-16', 'm.jpg', 'Mouses'),
+(15, 'keyboard', 'keyboard', 45, '230dh', '2022-11-16', 'k4.jpg', 'KeyBoards'),
+(16, 'mouse', 'mouse', 30, '700dh', '2022-11-16', 'm2.jpg', 'Mouses'),
+(17, 'mouse', 'mouse', 30, '200dh', '2022-11-16', 'm3.jpg', 'Mouses'),
+(18, 'mouse', 'mouse', 20, '10000dh', '2022-11-16', 'm4.jpg', 'Mouses'),
+(19, 'keyboard', 'keyboard', 45, '230dh', '2022-11-16', 'k.jpg', 'KeyBoards'),
+(20, 'keyboard', 'keyboard', 45, '230dh', '2022-11-16', 'k2.jpg', 'KeyBoards');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Structure de la table `users`
 --
 
 CREATE TABLE `users` (
@@ -76,7 +79,7 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `users`
+-- Déchargement des données de la table `users`
 --
 
 INSERT INTO `users` (`UserID`, `Username`, `Password`, `Email`, `FullName`) VALUES
@@ -85,33 +88,33 @@ INSERT INTO `users` (`UserID`, `Username`, `Password`, `Email`, `FullName`) VALU
 (3, 'Youssef', '123', 'youssef@gmail.com', 'Youssef\r\n');
 
 --
--- Indexes for dumped tables
+-- Index pour les tables déchargées
 --
 
 --
--- Indexes for table `items`
+-- Index pour la table `items`
 --
 ALTER TABLE `items`
   ADD PRIMARY KEY (`Item_ID`);
 
 --
--- Indexes for table `users`
+-- Index pour la table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`UserID`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
--- AUTO_INCREMENT for table `items`
+-- AUTO_INCREMENT pour la table `items`
 --
 ALTER TABLE `items`
-  MODIFY `Item_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `Item_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
   MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
