@@ -15,7 +15,3 @@ category.addEventListener('change', function(){
     }
   })
 })
-
-
-
-

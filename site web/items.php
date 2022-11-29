@@ -149,7 +149,6 @@ if (isset($_SESSION['Username'])) {
                     'zprice' => $price,
                     'zimage' => $image,
                     'zcategory' => $category
-
                 )
             );
 

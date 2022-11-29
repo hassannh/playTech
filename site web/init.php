@@ -5,7 +5,7 @@ include 'connect.php';
 include 'tmp/functions.php';
 include 'tmp/head.php';
 
-//Include Navbar On All Pages Expect The One With $noNavbar Variable
+//Include Navbar On All Pages Execpt The One With $noNavbar Variable
 
 if (!isset($noNavbar)) {
     include 'tmp/navbar.php';

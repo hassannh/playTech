@@ -32,8 +32,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $count = $stmt->rowCount();
 
     // If Count > 0 This Mean The Database Contain Record About This Username
-    //
-
     if ($count > 0) {
         $_SESSION['Username'] = $username; // Register Session Name
         $_SESSION['ID'] = $row['UserID']; // Register Session ID
