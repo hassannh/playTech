@@ -38,85 +38,85 @@ if (isset($_SESSION['Username'])) {
 
         $items = $stmt->fetchAll();
 
-?>
+        ?>
 
-<h1 class="text-center push">Manage Items</h1>
-<div class="container">
-    <div class="table-responsive">
-        <table class="main-table text-center table table-bordered">
-            <tr>
-                <td>#ID</td>
-                <td>Name</td>
-                <td>Description</td>
-                <td>Quantity</td>
-                <td>Price</td>
-                <td>Adding Date</td>
-                <td>Control</td>
-            </tr>
+        <h1 class="text-center push">Manage Items</h1>
+        <div class="container">
+            <div class="table-responsive">
+                <table class="main-table text-center table table-bordered">
+                    <tr>
+                        <td>#ID</td>
+                        <td>Name</td>
+                        <td>Description</td>
+                        <td>Quantity</td>
+                        <td>Price</td>
+                        <td>Adding Date</td>
+                        <td>Control</td>
+                    </tr>
 
-            <?php
-        foreach ($items as $item) {
+                    <?php
+                    foreach ($items as $item) {
 
-            echo "<tr>";
-            echo "<td>" . $item['Item_ID'] . "</td>";
-            echo "<td>" . $item['Name'] . "</td>";
-            echo "<td>" . $item['Description'] . "</td>";
-            echo "<td>" . $item['quantity'] . "</td>";
-            echo "<td>" . $item['Price'] . "</td>";
-            echo "<td>" . $item['Add_Date'] . "</td>";
-            echo '<td style=" GAP: 10PX; DISPLAY: flex; FLEX-WRAP: WRAP; JUSTIFY-CONTENT: center;" class="controol">';
-            echo "<a href='items.php?do=Edit&itemid=" . $item['Item_ID'] . "' class='btn btn-success'><i class='fa fa-edit'></i> Edit</a>";
-            echo "<a href='items.php?do=Delete&itemid=" . $item['Item_ID'] . "' class='btn btn-danger confirm'><i class='fa fa-close'></i> Delete </a>";
-            echo "</td>";
-            echo "</tr>";
-        }
-            ?>
-        </table>
-    </div>
-    <a href="items.php?do=Add" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i> New Item</a>
-</div>
-<?php } elseif ($do == 'Add') { // Add Items Page 
-?>
-<form class="add_item" action="?do=Insert" method="POST">
-    <div class="item">
-        <label class="input-group-text label_item" for="name">Nom de produit</label>
-        <input type="text" class="form-control" name="name" placeholder="Name Of The Item" required="required">
-    </div>
-    <div class="item">
-        <label class="input-group-text label_item" for="description">Description de produit</label>
-        <input type="text" class="form-control" name="description" placeholder="Description Of The Item"
-            required="required">
-    </div>
-    <div class="item">
-        <label class="input-group-text label_item" for="quantity">Quantity</label>
-        <input type="text" class="form-control" name="quantity" placeholder="quantity" required="required">
-    </div>
+                        echo "<tr>";
+                        echo "<td>" . $item['Item_ID'] . "</td>";
+                        echo "<td>" . $item['Name'] . "</td>";
+                        echo "<td>" . $item['Description'] . "</td>";
+                        echo "<td>" . $item['quantity'] . "</td>";
+                        echo "<td>" . $item['Price'] . "</td>";
+                        echo "<td>" . $item['Add_Date'] . "</td>";
+                        echo '<td style=" GAP: 10PX; DISPLAY: flex; FLEX-WRAP: WRAP; JUSTIFY-CONTENT: center;" class="controol">';
+                        echo "<a href='items.php?do=Edit&itemid=" . $item['Item_ID'] . "' class='btn btn-success'><i class='fa fa-edit'></i> Edit</a>";
+                        echo "<a href='items.php?do=Delete&itemid=" . $item['Item_ID'] . "' class='btn btn-danger confirm'><i class='fa fa-close'></i> Delete </a>";
+                        echo "</td>";
+                        echo "</tr>";
+                    }
+                    ?>
+                </table>
+            </div>
+            <a href="items.php?do=Add" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i> New Item</a>
+        </div>
+    <?php } elseif ($do == 'Add') { // Add Items Page 
+        ?>
+        <form class="add_item" action="?do=Insert" method="POST">
+            <div class="item">
+                <label class="input-group-text label_item" for="name">Nom de produit</label>
+                <input type="text" class="form-control" name="name" placeholder="Name Of The Item" required="required">
+            </div>
+            <div class="item">
+                <label class="input-group-text label_item" for="description">Description de produit</label>
+                <input type="text" class="form-control" name="description" placeholder="Description Of The Item"
+                    required="required">
+            </div>
+            <div class="item">
+                <label class="input-group-text label_item" for="quantity">Quantity</label>
+                <input type="text" class="form-control" name="quantity" placeholder="quantity" required="required">
+            </div>
 
 
 
-    <div class="item">
-        <label class="input-group-text label_item" for="prix_item">Prix de produit</label>
-        <input type="text" class="form-control" name="price" placeholder="Price Of The Item" required="required">
-    </div>
-    <div class="item">
-        <label class="input-group-text label_item" for="img_item">Image de produit</label>
-        <input class="form-control input_item" type="file" name="img_item" accept="image/png, image/jpeg, image/jpg"
-            required="required">
+            <div class="item">
+                <label class="input-group-text label_item" for="prix_item">Prix de produit</label>
+                <input type="text" class="form-control" name="price" placeholder="Price Of The Item" required="required">
+            </div>
+            <div class="item">
+                <label class="input-group-text label_item" for="img_item">Image de produit</label>
+                <input class="form-control input_item" type="file" name="img_item" accept="image/png, image/jpeg, image/jpg"
+                    required="required">
 
-    </div>
-    <select class="form-select input-group-text" name="categories">
-        <option selected Disabled>Categories</option>
-        <option value="Games">Games</option>
-        <option value="Mouses">Mouses</option>
-        <option value="KeyBoards">KeyBoards</option>
-        <option value="Screen">Screen</option>
-        <option value="Control">Remote control</option>
-    </select>
-    <div class="submit_add">
-        <input class="input-group-text input_submit" type="submit" value="+ Ajouter le produit">
-    </div>
-</form>
-<?php
+            </div>
+            <select class="form-select input-group-text" name="categories">
+                <option selected Disabled>Categories</option>
+                <option value="Games">Games</option>
+                <option value="Mouses">Mouses</option>
+                <option value="KeyBoards">KeyBoards</option>
+                <option value="Screen">Screen</option>
+                <option value="Control">Remote control</option>
+            </select>
+            <div class="submit_add">
+                <input class="input-group-text input_submit" type="submit" value="+ Ajouter le produit">
+            </div>
+        </form>
+        <?php
 
     } elseif ($do == 'Insert') { // Insert Items Page
 
@@ -132,31 +132,53 @@ if (isset($_SESSION['Username'])) {
             $quan = $_POST['quantity'];
             $price = $_POST['price'];
             $image = $_POST['img_item'];
-            $category = $_POST['categories'];
+            if (isset($_POST['categories'])) {
+                $category = $_POST['categories'];
 
 
-            // Insert Item info In The Database
-            //cus cant merge sql with php
+                // Insert Item info In The Database
+                //cus cant merge sql with php
 
-            $stmt = $con->prepare("INSERT INTO 
-                                items(Name, Description, quantity, Price, Image, Add_Date, categories)
-                            VALUES(:zname, :zdesc, :zquan, :zprice, :zimage, now(), :zcategory)");
-            $stmt->execute(
-                array(
-                    'zname' => $name,
-                    'zdesc' => $desc,
-                    'zquan' => $quan,
-                    'zprice' => $price,
-                    'zimage' => $image,
-                    'zcategory' => $category
-                )
-            );
+                $stmt = $con->prepare("INSERT INTO 
+                                        items
+                                        (Name, 
+                                        Description, 
+                                        quantity, 
+                                        Price, 
+                                        Image, 
+                                        Add_Date, 
+                                        categories)
+                                    VALUES
+                                    (:zname, 
+                                    :zdesc, 
+                                    :zquan, :zprice, :zimage, now(), :zcategory)");
+                $stmt->execute(
+                    array(
+                        'zname' => $name,
+                        'zdesc' => $desc,
+                        'zquan' => $quan,
+                        'zprice' => $price,
+                        'zimage' => $image,
+                        'zcategory' => $category
+                    )
+                );
 
-            // Echo Success Message
+                // Echo Success Message
 
-            $theMsg = "<div class='alert alert-success'>" . $stmt->rowCount() . ' Record Inserted </div>';
-            //back to previus page
-            redirectHome($theMsg, 'back');
+                $theMsg = "<div class='alert alert-success'>" . $stmt->rowCount() . ' Record Inserted </div>';
+                //back to previus page
+                redirectHome($theMsg, 'back');
+            } else {
+                //else if someone try to log in with url
+    
+                echo "<div class='container'>";
+    
+                $theMsg = '<div class="alert alert-danger push">Sorry You Cant Browse This Page Directly</div>';
+    
+                redirectHome($theMsg, 'back');
+    
+                echo "</div>";
+            }
 
         } else {
             //else if someone try to log in with url
@@ -199,47 +221,47 @@ if (isset($_SESSION['Username'])) {
 
         if ($count > 0) { ?>
 
-<h1 class="text-center">Edit Item</h1>
-<form class="add_item" action="?do=Update" method="POST">
-    <input type="hidden" name="itemid" value="<?php echo $itemid ?>">
-    <div class="item">
-        <label class="input-group-text label_item" for="name">Nom de produit</label>
-        <input type="text" class="form-control" name="name" value="<?php echo $item['Name'] ?>" required="required">
-    </div>
-    <div class="item">
-        <label class="input-group-text label_item" for="description">Description de produit</label>
-        <input type="text" class="form-control" name="description" value="<?php echo $item['Description'] ?>"
-            required="required">
-    </div>
-    <div class="item">
-        <label class="input-group-text label_item" for="quantity">Quantity</label>
-        <input type="text" class="form-control" name="quantity" value="<?php echo $item['quantity'] ?>"
-            required="required">
-    </div>
-    <div class="item">
-        <label class="input-group-text label_item" for="prix_item">Prix de produit</label>
-        <input type="text" class="form-control" name="price" value="<?php echo $item['Price'] ?>" required="required">
-    </div>
-    <div class="item">
-        <label class="input-group-text label_item" for="img_item">Image de produit</label>
-        <input class="form-control input_item" type="file" name="img_item" accept="image/png, image/jpeg, image/jpg">
+            <h1 class="text-center">Edit Item</h1>
+            <form class="add_item" action="?do=Update" method="POST">
+                <input type="hidden" name="itemid" value="<?php echo $itemid ?>">
+                <div class="item">
+                    <label class="input-group-text label_item" for="name">Nom de produit</label>
+                    <input type="text" class="form-control" name="name" value="<?php echo $item['Name'] ?>" required="required">
+                </div>
+                <div class="item">
+                    <label class="input-group-text label_item" for="description">Description de produit</label>
+                    <input type="text" class="form-control" name="description" value="<?php echo $item['Description'] ?>"
+                        required="required">
+                </div>
+                <div class="item">
+                    <label class="input-group-text label_item" for="quantity">Quantity</label>
+                    <input type="text" class="form-control" name="quantity" value="<?php echo $item['quantity'] ?>"
+                        required="required">
+                </div>
+                <div class="item">
+                    <label class="input-group-text label_item" for="prix_item">Prix de produit</label>
+                    <input type="text" class="form-control" name="price" value="<?php echo $item['Price'] ?>" required="required">
+                </div>
+                <div class="item">
+                    <label class="input-group-text label_item" for="img_item">Image de produit</label>
+                    <input class="form-control input_item" type="file" name="img_item" accept="image/png, image/jpeg, image/jpg">
 
-    </div>
-    <select class="form-select input-group-text" name="categories">
-        <option disabled selected>
-            <?php echo $item['categories'] ?>
-        </option>
-        <option value="Games">Games</option>
-        <option value="Mouses">Mouses</option>
-        <option value="KeyBoards">KeyBoards</option>
-        <option value="Screen">Screen</option>
-        <option value="Control">Remote control</option>
-    </select>
-    <div class="submit_add">
-        <input class="input-group-text input_submit" type="submit" value="+ Save Item">
-    </div>
-</form>
-<?php
+                </div>
+                <select class="form-select input-group-text" name="categories" required>
+                    <option disabled selected>
+                        <?php echo $item['categories'] ?>
+                    </option>
+                    <option value="Games">Games</option>
+                    <option value="Mouses">Mouses</option>
+                    <option value="KeyBoards">KeyBoards</option>
+                    <option value="Screen">Screen</option>
+                    <option value="Control">Remote control</option>
+                </select>
+                <div class="submit_add">
+                    <input class="input-group-text input_submit" type="submit" value="+ Save Item">
+                </div>
+            </form>
+            <?php
 
             // If not find id if id=0 OR something else
 

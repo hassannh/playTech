@@ -28,7 +28,7 @@
     ** $seconds = Seconds Before Redirecting
     */
 
-    function redirectHome($theMsg,$url=null, $seconds = 0){
+    function redirectHome($theMsg,$url=null, $seconds = 3){
 
         if ($url === null) {
 
@@ -54,9 +54,9 @@
 
         }
 
-        //  echo $theMsg;
+        echo $theMsg;
         
-        // echo "<div class='alert alert-info push'>You Will Be Redirected To $link After $seconds Secondes.</div>";
+        echo "<div class='alert alert-info push'>You Will Be Redirected To $link After $seconds Secondes.</div>";
 
         header("refresh:$seconds;url=$url");
 
